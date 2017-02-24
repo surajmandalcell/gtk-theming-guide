@@ -171,7 +171,7 @@ code :
 	@import url("apps/software-center.css");
 	@import url("public-colors.css");
 
-<br/><br/>
+<br/>
 
 The "**metacity-1**" folder contains images that the Metacity window-manager uses for buttons (such as the "close window" button). This directory also contains a file named "metacity-theme-1.xml" that contain's the theme's metadata (like the developer's name) and styling. However, the Metacity portion of the theme uses XML rather than CSS.
 
@@ -391,6 +391,7 @@ When creating themes, it may be helpful to test it and tweak the code to get the
    "apt-get install thewidgetfactory" and type "twf" in a terminal to
    run it.
 
+<br /><br />
 
 ### Theme Downloads
 
@@ -406,7 +407,7 @@ When creating themes, it may be helpful to test it and tweak the code to get the
  - Metacity - http://gnome-look.org/index.php?xcontentmode=101
  - Ubuntu Themes - http://www.ubuntuthemes.org/
 
-
+<br />
 ### Further Reading
 
  - Graphical User Interface (GUI) Reading Guide -
