@@ -22,7 +22,7 @@ Themes may be stored in "~/.themes" or "/usr/share/themes". Themes that are in "
 
  
 
-    $XDG_CONFIG_HOME/gtk-3.0/gtk.css (typically
+    	$XDG_CONFIG_HOME/gtk-3.0/gtk.css (typically
        ~/.config/gtk-3.0/gtk.css)
     
         
@@ -66,7 +66,7 @@ To explain how to create themes, we will study the "Ambiance" theme, which is us
 <br />
 "**index.theme**" contains metadata (such as the theme's name) and some important settings (such as the button layout). Below is the "index.theme" file for "Ambiance".
 
-code :
+<i>code :<i/>
 
     [Desktop Entry]
     Type=X-GNOME-Metatheme
@@ -84,7 +84,7 @@ code :
 <br />
 The "**gtk-2.0**" directory contains files for GTK2 such as a "gtkrc" file and an "apps" directory that contains application-specific GTK settings. The "gtkrc" file is the main CSS-file for the GTK2 portion of the theme. Below are the contents of /usr/share/themes/Ambiance/gtk-2.0/apps/nautilus.rc
 
-code :
+<i>code :<i/>
 
     # ==============================================================================
     # NAUTILUS SPECIFIC SETTINGS
@@ -97,10 +97,10 @@ code :
     widget_class "*Nautilus*<GtkNotebook>*<GtkEventBox>" style "nautilus_info_pane"
     widget_class "*Nautilus*<GtkButton>" style "notebook_button"
     widget_class "*Nautilus*<GtkButton>*<GtkLabel>" style "notebook_button"
-</br>
+<br />
 The "**gtk-3.0**" directory contains files for GTK3. Instead of "gtkrc", GTK3 uses "gtk.css" as the main theme file. In the Ambiance theme, the file contains one line - '@import url("gtk-main.css");'. The "settings.ini" file contains important theme-wide settings. GTK3 themes use an "apps" directory for the same purpose as GTK2. The "assets" directory contains images for radio buttons, check-boxes, etc. Below are the contents of /usr/share/themes/Ambiance/gtk-3.0/gtk-main.css
 
-code : 
+<i>code :<i/> 
 
 	/*default color scheme */
 	@define-color bg_color #f2f1f0;
@@ -181,7 +181,7 @@ Some themes may contain other directories. For instance, "Clearlooks-Phenix" has
 /usr/share/themes/Clearlooks-Phenix/xfwm4/themerc
 
 
-code :
+<i>code :</i>
 
 	# Clearlooks XFWM4 by Casey Kirsle
 	
