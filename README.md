@@ -1,11 +1,11 @@
 # Linux-Theming-Documentation
 
 ##If you are a linux user and unsatisfied with the current theme collection want to create new theme or modify current one then this documentation is for you
-
+<br />
 Many Linux desktops supporting themes. A theme is a particular appearance or "****" for the GUI. Users can change the theme to make the desktop look different. Usually, users also change the icons. However, the theme and icon-pack are two separate entities. Numerous people want to make their own theme, so here is an article about making GTK themes as well as various essential information.
 
 NOTE: This article primarily focuses on GTK3, but it will discuss a little about GTK2, Metacity, and others. Cursors and icons will not be discussed in this article.
-
+<br />
 ### Basic Concepts
 
 The GIMP ToolKit (GTK) is a widget-toolkit used to create GUIs on a variety of systems (thus making GTK cross-platform). GTK (http://www.gtk.org/) is commonly and incorrectly thought to stand for "GNOME ToolKit", but is actually stands for "GIMP ToolKit" because it was first created to design an user interface for GIMP. GTK is an object-oriented toolkit written in C (GTK itself is not a language). GTK is entirely open-source under the LGPL license. GTK is a widely used toolkit for GUIs and many tools are available for GTK.
@@ -13,7 +13,7 @@ The GIMP ToolKit (GTK) is a widget-toolkit used to create GUIs on a variety of s
 Themes made for GTK will not work in Qt-based applications. A Qt-theme is needed to apply a theme to Qt applications.
 
 The themes use Cascading Style-Sheets (CSS) to generate the theme's appearance. This is the same CSS that web-developers use on web-pages. However, instead of HTML tags being referenced, GTK widgets are specified. It is important that theme developers learn CSS.
-
+<br />
 ### Theme Location
 
 Themes may be stored in "~/.themes" or "/usr/share/themes". Themes that are in "~/.themes" are only accessible to the owner of that home folder. While themes in "/usr/share/themes" are global-themes that are accessible by all users. When a GTK application executes, it has a list of possible theme files that it checks in a specific order. If the theme file is not found, then it will try the next file on the list. Below is the list in the order that GTK3 applications try to use.
@@ -35,7 +35,7 @@ Themes may be stored in "~/.themes" or "/usr/share/themes". Themes that are in "
 ***NOTE***: "**NAME**" is a placeholder for the name of the current theme.
 
 If there are two themes with the same name, then the one in the user's home folder (~/.themes) will be used. Developers can take advantage of GTK's theme-seeking algorithm by testing new themes in their local home's theme directory.
-
+<br />
 ### Theme Engines
 
 A "Theme engine" is a piece of software that changes the look of the GUI's widgets. The engine reads and uses the theme's files to know how the various widgets should be drawn. Some engines come with themes of their own. Each engine has its advantages and disadvantages, and some engines add special properties and features.
@@ -48,7 +48,7 @@ Many theme-engines can be obtained from the default repositories. Debian-based L
 - gtk3-engines-unico - Unico GTK3 engine
 - gtk3-engines-xfce - GTK3 engine for Xfce
 
-
+<br />
 
 ### Creating GTK3 Themes
 
