@@ -1,0 +1,6 @@
+/_site
+/Gemfile.lock
+/dist/bootstrap
+/dist/jquery
+/.idea
+/*.iml
