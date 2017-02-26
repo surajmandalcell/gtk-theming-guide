@@ -1,7 +1,8 @@
 baseurl = "https://surajmandalcell.github.io"
 languageCode = "en-us"
+publishDir = "docs"
 title = "Gtk Theming Guide"
-theme = "hugo-material-docs"
+theme = "hugo-material-theme"
 metadataformat = "yaml"
 canonifyurls = true
 # Enable Google Analytics by entering your tracking id
