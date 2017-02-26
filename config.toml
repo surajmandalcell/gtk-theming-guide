@@ -1,4 +1,4 @@
-baseurl = "https://surajmandalcell.github.io/Gtk-Theming-Guide/docs"
+baseurl = "https://surajmandalcell.github.io/Gtk-Theming-Guide"
 languageCode = "en-us"
 publishDir = "docs"
 title = "Gtk Theming Guide"
