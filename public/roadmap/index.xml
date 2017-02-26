@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Roadmaps on Gtk Theming Guide</title>
+    <link>https://surajmandalcell.github.io/roadmap/index.xml</link>
+    <description>Recent content in Roadmaps on Gtk Theming Guide</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Released under the MIT license</copyright>
+    <lastBuildDate>Wed, 09 Mar 2016 20:08:11 +0100</lastBuildDate>
+    <atom:link href="https://surajmandalcell.github.io/roadmap/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Roadmap</title>
+      <link>https://surajmandalcell.github.io/roadmap/</link>
+      <pubDate>Wed, 09 Mar 2016 20:08:11 +0100</pubDate>
+      
+      <guid>https://surajmandalcell.github.io/roadmap/</guid>
+      <description>
+
+&lt;p&gt;Quo vadis? The port of the original &lt;a href=&#34;https://github.com/squidfunk/mkdocs-material&#34;&gt;Material theme&lt;/a&gt; has replicated nearly all of its features. A few are still missing but I&amp;rsquo;ve good news: the Hugo community is actively working on this issues. Maybe with the next release of Hugo we can abandon this list. Stay tuned.&lt;/p&gt;
+
+&lt;h2 id=&#34;localization&#34;&gt;Localization&lt;/h2&gt;
+
+&lt;p&gt;Currently, it is possible to collect all strings in a single place for easy customization. However, this only enables you to define all strings in a single language. This approach is quite limiting in terms of localization support. Therefore, I decided to wait for a native integration. This way we can avoid a second setup of all strings in your website.&lt;/p&gt;
+
+&lt;p&gt;Keep an eye on &lt;a href=&#34;https://github.com/spf13/hugo/issues/1734&#34;&gt;#1734&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;search&#34;&gt;Search&lt;/h2&gt;
+
+&lt;p&gt;Beside third-party services, some hacky workarounds and Grunt-/Gulp-based scripts that only require unnecessary dependencies, future versions of Hugo will support the generation of a content index as a core feature.&lt;/p&gt;
+
+&lt;p&gt;This approach plays well with this theme since MkDocs does the same.&lt;/p&gt;
+
+&lt;p&gt;Keep an eye on &lt;a href=&#34;https://github.com/spf13/hugo/pull/1853&#34;&gt;#1853&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;contributing&#34;&gt;Contributing&lt;/h2&gt;
+
+&lt;p&gt;Did you found an bug or you would like to suggest a new feature? I&amp;rsquo;m open for feedback. Please open a new &lt;a href=&#34;https://github.com/digitalcraftsman/hugo-material-docs/issues&#34;&gt;issue&lt;/a&gt; and let me know.&lt;/p&gt;
+
+&lt;p&gt;You&amp;rsquo;re also welcome to contribute with &lt;a href=&#34;https://github.com/digitalcraftsman/hugo-material-docs/pulls&#34;&gt;pull requests&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
