@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gtk Theming Guide</title>
-    <link>https://surajmandalcell.github.io/Gtk-Theming-Guide/docs/index.xml</link>
+    <link>https://surajmandalcell.github.io/Gtk-Theming-Guide/index.xml</link>
     <description>Recent content on Gtk Theming Guide</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Released under the MIT license</copyright>
     <lastBuildDate>Wed, 09 Mar 2016 00:11:02 +0100</lastBuildDate>
-    <atom:link href="https://surajmandalcell.github.io/Gtk-Theming-Guide/docs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://surajmandalcell.github.io/Gtk-Theming-Guide/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Getting started</title>
-      <link>https://surajmandalcell.github.io/Gtk-Theming-Guide/docs/getting-started/</link>
+      <link>https://surajmandalcell.github.io/Gtk-Theming-Guide/getting-started/</link>
       <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
       
-      <guid>https://surajmandalcell.github.io/Gtk-Theming-Guide/docs/getting-started/</guid>
+      <guid>https://surajmandalcell.github.io/Gtk-Theming-Guide/getting-started/</guid>
       <description>
 
 &lt;h2 id=&#34;basic-concepts&#34;&gt;Basic Concepts&lt;/h2&gt;
@@ -448,10 +448,10 @@ run it.&lt;/li&gt;
     
     <item>
       <title>License</title>
-      <link>https://surajmandalcell.github.io/Gtk-Theming-Guide/docs/license/</link>
+      <link>https://surajmandalcell.github.io/Gtk-Theming-Guide/license/</link>
       <pubDate>Wed, 09 Mar 2016 20:10:46 +0100</pubDate>
       
-      <guid>https://surajmandalcell.github.io/Gtk-Theming-Guide/docs/license/</guid>
+      <guid>https://surajmandalcell.github.io/Gtk-Theming-Guide/license/</guid>
       <description>&lt;p&gt;For the theme of this documentation&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-licence&#34;&gt;Copyright (c) 2016 Digitalcraftsman &amp;lt;digitalcraftsman@protonmail.com&amp;gt;&amp;lt;br&amp;gt;
@@ -1160,10 +1160,10 @@ Public License instead of this License.  But first, please read
     
     <item>
       <title>Gtk Theming Documentation</title>
-      <link>https://surajmandalcell.github.io/Gtk-Theming-Guide/docs/</link>
+      <link>https://surajmandalcell.github.io/Gtk-Theming-Guide/</link>
       <pubDate>Tue, 08 Mar 2016 21:07:13 +0100</pubDate>
       
-      <guid>https://surajmandalcell.github.io/Gtk-Theming-Guide/docs/</guid>
+      <guid>https://surajmandalcell.github.io/Gtk-Theming-Guide/</guid>
       <description>
 
 &lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
@@ -1176,7 +1176,7 @@ Public License instead of this License.  But first, please read
 
 &lt;p&gt;NOTE: This article primarily focuses on GTK3, but it will discuss a little about GTK2, Metacity, and others. Cursors and icons will not be discussed in this article.&lt;/p&gt;
 
-&lt;p&gt;See the &lt;a href=&#34;https://surajmandalcell.github.io/Gtk-Theming-Guide/docs/getting-started/&#34;&gt;getting started guide&lt;/a&gt; for instructions how to get
+&lt;p&gt;See the &lt;a href=&#34;https://surajmandalcell.github.io/Gtk-Theming-Guide/getting-started/&#34;&gt;getting started guide&lt;/a&gt; for instructions how to get
 it up and running.&lt;/p&gt;
 </description>
     </item>
