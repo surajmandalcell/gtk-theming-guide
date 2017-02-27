@@ -1,5 +1,5 @@
-baseurl = ""
-relativeurls = true
+baseurl = "http://gtkthemeingguide.ml"
+# relativeurls = true
 languageCode = "en-us"
 publishDir = "docs"
 title = "Gtk Theming Guide"
