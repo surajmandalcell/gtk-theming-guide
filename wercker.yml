@@ -9,7 +9,7 @@ deploy:
   steps:
     - install-packages:
         packages: git ssh-client
-    - lukevivier/master@0.2.1:
+    - surajmandalcell/master:
         token: GIT_TOKEN
         domain: gtkthemingguide.ml
         basedir: public
