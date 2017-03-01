@@ -1,0 +1,15 @@
+box: debian
+build:
+  steps:
+    - arjen/hugo-build:
+        version: "0.14"
+        theme: hugo-material-docs
+        flags: --buildDrafts=true
+deploy:
+  steps:
+    - install-packages:
+        packages: git ssh-client
+    - lukevivier/gh-pages:
+        token: $GIT_TOKEN
+        basedir: public
+        domain: gtkthemingguide.ml
