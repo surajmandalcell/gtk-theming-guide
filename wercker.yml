@@ -1,13 +1,15 @@
 box: debian
 build:
   steps:
-    - install-packages:
-        packages: git
-    - script:
-        name: download theme
-        code: |
-            $(git clone https://github.com/digitalcraftsman/hugo-material-docs.git themes/hugo-material-docs)
     - arjen/hugo-build:
         version: "0.14"
         theme: herring-cove
         flags: --buildDrafts=true
+deploy:
+  steps:
+    - install-packages:
+        packages: git ssh-client
+    - lukevivier:
+        token: $GIT_TOKEN
+        domain: gtkthemingguide.ml
+        basedir: public
