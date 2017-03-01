@@ -1,4 +1,4 @@
-baseurl = "http://gtkthemeingguide.ml"
+baseurl = "http://gtkthemingguide.ml"
 # relativeurls = true
 languageCode = "en-us"
 publishDir = "docs"

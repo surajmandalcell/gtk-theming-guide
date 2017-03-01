@@ -1,0 +1,15 @@
+box: debian
+build:
+  steps:
+    - arjen/hugo-build:
+        version: "0.14"
+        theme: herring-cove
+        flags: --buildDrafts=true
+deploy:
+  steps:
+    - install-packages:
+        packages: git ssh-client
+    - surajmandalcell/master:
+        token: GIT_TOKEN
+        domain: gtkthemingguide.ml
+        basedir: public
