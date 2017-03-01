@@ -10,6 +10,6 @@ deploy:
     - install-packages:
         packages: git ssh-client
     - lukevivier:
-        token: $GIT_TOKEN
+        token: GIT_TOKEN
         domain: gtkthemingguide.ml
         basedir: public
