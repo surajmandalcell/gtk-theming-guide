@@ -1,8 +1,6 @@
-baseurl = "http://gtkthemingguide.ml"
-#relativeurls = true
+baseurl = "https://example.org/"
 languageCode = "en-us"
-publishDir = "docs"
-title = "Gtk Theming Guide"
+title = "Material Docs"
 theme = "hugo-material-docs"
 metadataformat = "yaml"
 canonifyurls = true
@@ -11,16 +9,16 @@ googleAnalytics = ""
 
 [params]
 	# General information
-	author = "surajmandalcell"
-	description = "Documentation for people wanting to create their own gtk theme"
+	author = "Digitalcraftsman"
+	description = "A material design theme for documentations."
 	copyright = "Released under the MIT license"
 
 	# Repository
 	provider = "GitHub"
-	repo_url = "https://github.com/surajmandalcell/Gtk-Theming-Guide"
+	repo_url = "https://github.com/digitalcraftsman/hugo-material-docs"
 
 	version = "1.0.0"
-	# logo = "images/logo.png"
+	logo = "images/logo.png"
 	favicon = ""
 
 	permalink = "#"
@@ -33,8 +31,8 @@ googleAnalytics = ""
 	highlight_css  = ""
 
 	[params.palette]
-    	primary = "brown"
-    	accent  = "blue-grey"
+    	primary = "red"
+    	accent  = "teal"
 
     [params.font]
     	text = "Ubuntu"
@@ -42,13 +40,13 @@ googleAnalytics = ""
 
 
 [social]
-	twitter = "surajmandalcell"
-	github  = "surajmandalcell"
-	email   = "cruelplatypus67@gmail.com"
+	twitter = ""
+	github  = "digitalcraftsman"
+	email   = "hello@email.com"
 
 
 [[menu.main]]
-	name   = "Introduction"
+	name   = "Material"
 	url    = "/"
 	weight = 0
 
@@ -57,20 +55,21 @@ googleAnalytics = ""
 	url    = "getting-started/"
 	weight = 10
 
-# [[menu.main]]
-# 	name   = "Roadmap"
-# 	url    = "roadmap/"
-# 	weight = 20
+[[menu.main]]
+	name   = "Adding content"
+	url    = "adding-content/"
+	weight = 20
+
+[[menu.main]]
+	name   = "Roadmap"
+	url    = "roadmap/"
+	weight = 30
 
 [[menu.main]]
 	name   = "License"
 	url    = "license/"
-	weight = 20
+	weight = 40
 
-# [[menu.main]]
-# 	name   = "About"
-# 	url    = "about/"
-# 	weight = 40
 
 [blackfriday]
 	smartypants	= true
