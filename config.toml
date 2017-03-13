@@ -1,7 +1,7 @@
 baseurl = "http://gtkthemingguide.ml"
 # relativeurls = true
 languageCode = "en-us"
-publishDir = "docs"
+#publishDir = "docs"
 title = "Gtk Theming Guide"
 theme = "hugo-material-docs"
 metadataformat = "yaml"

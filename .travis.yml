@@ -1,0 +1,5 @@
+deploy:
+  provider: script
+  script: _scripts/HugoAutomate.sh
+  on:
+    branch: develop
