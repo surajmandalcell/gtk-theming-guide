@@ -3,13 +3,13 @@ build:
   steps:
     - arjen/hugo-build:
         version: "0.14"
-        theme: herring-cove
+        theme: hugo-material-docs
         flags: --buildDrafts=true
 deploy:
   steps:
     - install-packages:
         packages: git ssh-client
-    - surajmandalcell/master:
-        token: GIT_TOKEN
-        domain: gtkthemingguide.ml
+    - lukevivier/gh-pages:
+        token: $GIT_TOKEN
         basedir: public
+        domain: gtkthemingguide.ml
