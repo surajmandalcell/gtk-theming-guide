@@ -1,12 +1,12 @@
 baseurl = "http://gtkthemingguide.ml"
-#relativeurls = true
+#relativeurls = false
 languageCode = "en-us"
 publishDir = "docs"
 title = "Gtk Theming Guide"
 theme = "hugo-material-docs"
 metadataformat = "yaml"
 canonifyurls = true
-# Enable Google Analytics by entering your tracking id
+#Enable Google Analytics by entering your tracking id
 googleAnalytics = ""
 
 [params]

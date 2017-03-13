@@ -1,15 +1,10 @@
-box: debian
+box: wercker/default
 build:
   steps:
-    - arjen/hugo-build:
-        version: "0.14"
+    - me6iaton/hugo-build:
         theme: hugo-material-docs
-        flags: --buildDrafts=true
 deploy:
   steps:
-    - install-packages:
-        packages: git ssh-client
-    - lukevivier/gh-pages:
-        token: $GIT_TOKEN
+    - lukevivier/gh-pages@0.2.1:
+        token: GIT_TOKEN
         basedir: public
-        domain: gtkthemingguide.ml
