@@ -2,7 +2,7 @@ box: debian
 build:
   steps:
     - arjen/hugo-build:
-        theme: hugo-material-theme
+        theme: hugo-material-docs
         flags: --buildDrafts=true
     - script:
         name: ls stuff
