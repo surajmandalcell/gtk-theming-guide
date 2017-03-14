@@ -22,5 +22,5 @@ deploy:
         packages: git ssh-client liberror-perl
     - lukevivier/gh-pages@0.2.1:
         token: GIT_TOKEN
-        domain: hugo-wercker.ig.nore.me
+        domain: https://surajmandalcell.github.io/
         basedir: public
