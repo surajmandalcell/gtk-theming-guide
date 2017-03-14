@@ -57,20 +57,25 @@ googleAnalytics = ""
 	url    = "getting-started/"
 	weight = 10
 
-# [[menu.main]]
-# 	name   = "Roadmap"
-# 	url    = "roadmap/"
-# 	weight = 20
+[[menu.main]]
+	name   = "Creating GTK3 Themes"
+	url    = "creating-gtk3-themes/"
+	weight = 20
+
+[[menu.main]]
+ 	name   = "Creating Icon Theme"
+ 	url    = "creating-icon-theme/"
+ 	weight = 30
 
 [[menu.main]]
 	name   = "License"
 	url    = "license/"
-	weight = 20
+	weight = 40
 
 # [[menu.main]]
 # 	name   = "About"
 # 	url    = "about/"
-# 	weight = 40
+# 	weight = 60
 
 [blackfriday]
 	smartypants	= true

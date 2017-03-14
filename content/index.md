@@ -2,10 +2,10 @@
 date: 2016-03-08T21:07:13+01:00
 title: Gtk Theming Documentation
 type: index
-weight: 0
+weight: 40
 ---
 
-## Getting Started
+## Overview
 
 ### If you are a linux user and unsatisfied with the current theme collection want to create new theme or modify current one then this documentation is for you
 
