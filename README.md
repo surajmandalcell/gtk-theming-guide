@@ -7,6 +7,8 @@ This documentation includes all the help you need to kick start a gtk theme from
 
 This documentation is located at http://gtkthemingguide.ml
 
+![](static/img/thumbnail.png)
+
 For full list of credits see [credits.md](credits.md) in the repo
 
 
