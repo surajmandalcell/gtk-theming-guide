@@ -5,7 +5,7 @@
 
 This documentation includes all the help you need to kick start a gtk theme from scratch or modify a pre-existing gtk theme to make it better
 
-This documentation is located at http://gtkthemingguide.ml
+This documentation is located at https://surajmandalcell.github.io/Gtk-Theming-Guide/
 
 ![](static/img/thumbnail.png)
 
