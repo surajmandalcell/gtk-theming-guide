@@ -1,4 +1,4 @@
-baseurl = "http://gtkthemingguide.ml"
+baseurl = "https://surajmandalcell.github.io/Gtk-Theming-Guide/"
 #relativeurls = false
 languageCode = "en-us"
 #publishDir = "docs"

@@ -4,8 +4,8 @@ licenselink = "https://github.com/digitalcraftsman/hugo-material-docs/blob/maste
 description = "A material design theme for documentations."
 homepage = "https://github.com/digitalcraftsman/hugo-material-docs"
 tags = ["material", "documentation", "docs", "google analytics", "responsive"]
-features = ["", ""]
-min_version = 0.15
+features = []
+min_version = 0.20
 
 [author]
   name = "Digitalcraftsman"

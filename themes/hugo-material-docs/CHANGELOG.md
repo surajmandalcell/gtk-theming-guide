@@ -1,6 +1,10 @@
 # Changelog
 
 
+### 8th April 2017
+
+`.Now` has been deprecated. Hence the required minimum version of Hugo is v0.20.
+
 ### 11th May 2016
 
 #### Add templates for section lists
