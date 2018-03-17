@@ -14,5 +14,5 @@ min_version = 0.20
 # If porting an existing theme
 [original]
   name = "Martin Donath"
-  homepage = "http://struct.cc/"
+  homepage = "https://struct.cc/"
   repo = "https://github.com/squidfunk/mkdocs-material"

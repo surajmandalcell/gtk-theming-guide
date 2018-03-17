@@ -32,7 +32,7 @@ You maybe noticed that the menu on the left contains a small table of contents o
 
 ## Admonitions
 
-Admonition is a handy feature that adds block-styled side content to your documentation, for example hints, notes or warnings. It can be enabled by using the corresponding [shortcodes](http://gohugo.io/extras/shortcodes/) inside your content:
+Admonition is a handy feature that adds block-styled side content to your documentation, for example hints, notes or warnings. It can be enabled by using the corresponding [shortcodes](https://gohugo.io/extras/shortcodes/) inside your content:
 
 ```go
 {{</* note title="Note" */>}}

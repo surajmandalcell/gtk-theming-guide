@@ -353,7 +353,7 @@ When creating themes, it may be helpful to test it and tweak the code to get the
    it.
  - LXappearance - This program can change themes, icons, and fonts. PyWF
  - This is a Python-based alternative to "The Widget Factory". PyWF can be obtained at
-   http://gtk-apps.org/content/show.php/PyTWF?content=102024
+   https://gtk-apps.org/content/show.php/PyTWF?content=102024
  - The Widget Factory - This is an old GTK-previewer. To install this program, type
    "apt-get install thewidgetfactory" and type "twf" in a terminal to
    run it.
@@ -362,29 +362,29 @@ When creating themes, it may be helpful to test it and tweak the code to get the
 
 ## Theme Downloads
 
- - Cinnamon - http://gnome-look.org/index.php?xcontentmode=104
- - Compiz - http://gnome-look.org/index.php?xcontentmode=102
- - GNOME Shell - http://gnome-look.org/index.php?xcontentmode=191
- - GTK2 - http://gnome-look.org/index.php?xcontentmode=100
- - GTK3 - http://gnome-look.org/index.php?xcontentmode=167
+ - Cinnamon - https://gnome-look.org/index.php?xcontentmode=104
+ - Compiz - https://gnome-look.org/index.php?xcontentmode=102
+ - GNOME Shell - https://gnome-look.org/index.php?xcontentmode=191
+ - GTK2 - https://gnome-look.org/index.php?xcontentmode=100
+ - GTK3 - https://gnome-look.org/index.php?xcontentmode=167
  - KDE/Qt -
-   http://kde-look.org/index.php?xcontentmode=8x9x10x11x12x13x14x15x16
+   https://kde-look.org/index.php?xcontentmode=8x9x10x11x12x13x14x15x16
  - Linux Mint Themes -
-   http://linuxmint-art.org/index.php?xcontentmode=9x14x100
- - Metacity - http://gnome-look.org/index.php?xcontentmode=101
- - Ubuntu Themes - http://www.ubuntuthemes.org/
+   https://linuxmint-art.org/index.php?xcontentmode=9x14x100
+ - Metacity - https://gnome-look.org/index.php?xcontentmode=101
+ - Ubuntu Themes - https://www.ubuntuthemes.org/
 
 <br />
 
 ## Further Reading
 
  - Graphical User Interface (GUI) Reading Guide -
-   http://www.linux.org/threads/gui-reading-guide.6471/
- - GTK - http://www.linux.org/threads/understanding-gtk.6291/
+   https://www.linux.org/threads/gui-reading-guide.6471/
+ - GTK - https://www.linux.org/threads/understanding-gtk.6291/
  - Introduction to Glade -
-   http://www.linux.org/threads/introduction-to-glade.7142/
+   https://www.linux.org/threads/introduction-to-glade.7142/
  - Desktop Environment vs Window Managers -
-   http://www.linux.org/threads/desktop-environment-vs-window-managers.7802/
+   https://www.linux.org/threads/desktop-environment-vs-window-managers.7802/
  - Official GTK+ 3 Reference Manual -
    https://developer.gnome.org/gtk3/stable/
  - GtkCssProvider -

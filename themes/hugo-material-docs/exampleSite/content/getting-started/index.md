@@ -8,7 +8,7 @@ weight: 10
 
 ### Installing Hugo
 
-Hugo itself is just a single binary without dependencies on expensive runtimes like Ruby, Python or PHP and without dependencies on any databases. You just need to download the [latest version](https://github.com/spf13/hugo/releases). For more information read the official [installation guides](http://gohugo.io/overview/installing/).
+Hugo itself is just a single binary without dependencies on expensive runtimes like Ruby, Python or PHP and without dependencies on any databases. You just need to download the [latest version](https://github.com/spf13/hugo/releases). For more information read the official [installation guides](https://gohugo.io/overview/installing/).
 
 Let's make sure Hugo is set up as expected. You should see a similar version number in your terminal:
 
@@ -45,7 +45,7 @@ very handy. Spin it up with the following command:
 hugo server
 ```
 
-Now you can go to [localhost:1313](http://localhost:1313) and the Material
+Now you can go to [localhost:1313](https://localhost:1313) and the Material
 theme should be visible. You can now start writing your documentation, or read
 on and customize the theme through some options.
 
@@ -153,7 +153,7 @@ material design [color palette][]. This makes it very easy to change the overall
 ```
 
 Color names can be written upper- or lowercase but must match the names of the
-material design [color palette](http://www.materialui.co/colors). Valid values are: _red_, _pink_, _purple_, _deep purple_, _indigo_, _blue_, _light-blue_, _cyan_, _teal_, _green_, _light-green_,
+material design [color palette](https://www.materialui.co/colors). Valid values are: _red_, _pink_, _purple_, _deep purple_, _indigo_, _blue_, _light-blue_, _cyan_, _teal_, _green_, _light-green_,
 _lime_, _yellow_, _amber_, _orange_, _deep-orange_, _brown_, _grey_ and
 _blue-grey_. The last three colors can only be used as a primary color.
 
@@ -164,7 +164,7 @@ If the color is set via this configuration, an additional CSS file called
 
 ### Changing the font family
 
-Material uses the [Ubuntu font family](http://font.ubuntu.com) by default, specifically the regular sans-serif type for text and the monospaced type for code. Both fonts are loaded from [Google Fonts](https://www.google.com/fonts) and can be easily changed to other fonts, like for example Google's own [Roboto font](https://www.google.com/fonts/specimen/Roboto):
+Material uses the [Ubuntu font family](https://font.ubuntu.com) by default, specifically the regular sans-serif type for text and the monospaced type for code. Both fonts are loaded from [Google Fonts](https://www.google.com/fonts) and can be easily changed to other fonts, like for example Google's own [Roboto font](https://www.google.com/fonts/specimen/Roboto):
 
 ```toml
 [params.font]
@@ -229,7 +229,7 @@ menu:
 
 ### Markdown extensions
 
-Hugo uses [Blackfriday](https://github.com/russross/blackfriday) to process your content. For a detailed description of all options take a look at the [Blackfriday configuration](http://gohugo.io/overview/configuration/#configure-blackfriday-rendering) section in the Hugo documentation.
+Hugo uses [Blackfriday](https://github.com/russross/blackfriday) to process your content. For a detailed description of all options take a look at the [Blackfriday configuration](https://gohugo.io/overview/configuration/#configure-blackfriday-rendering) section in the Hugo documentation.
 
 ```toml
 [blackfriday]
