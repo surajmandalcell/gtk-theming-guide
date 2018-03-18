@@ -1,0 +1,19 @@
+box: debian
+build:
+  steps:
+    - arjen/hugo-build:
+        theme: hugo-material-docs
+        flags: --buildDrafts=true
+    - script:
+        name: ls stuff
+        code: |
+          ls -haltr /pipeline/source/public
+deploy:
+    steps:
+        - install-packages:
+            packages: git ssh-client
+        - leipert/git-push:
+            gh_oauth: GIT_TOKEN
+            repo: surajmandalcell/Gtk-Theming-Guide
+            branch: gh-pages
+            basedir: public
