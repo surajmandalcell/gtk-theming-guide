@@ -1,4 +1,5 @@
 baseURL = "https://surajmandalcell.github.io/Gtk-Theming-Guide/"
+relativeurls = false
 languageCode = "en-us"
 title = "Gtk Theming Guide"
 theme = "hugo-material-docs"
