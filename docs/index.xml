@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gtk Theming Guide</title>
+    <link>https://surajmandalcell.github.io/Gtk-Theming-Guide/</link>
+    <description>Recent content on Gtk Theming Guide</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 08 Mar 2016 21:07:13 +0100</lastBuildDate>
+    
+	<atom:link href="https://surajmandalcell.github.io/Gtk-Theming-Guide/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Gtk Theming Documentation</title>
+      <link>https://surajmandalcell.github.io/Gtk-Theming-Guide/</link>
+      <pubDate>Tue, 08 Mar 2016 21:07:13 +0100</pubDate>
+      
+      <guid>https://surajmandalcell.github.io/Gtk-Theming-Guide/</guid>
+      <description>Overview If you are a linux user and unsatisfied with the current theme collection want to create new theme or modify current one then this documentation is for you Many Linux desktops supporting themes. A theme is a particular appearance or &amp;ldquo;****&amp;rdquo; for the GUI. Users can change the theme to make the desktop look different. Usually, users also change the icons. However, the theme and icon-pack are two separate entities.</description>
+    </item>
+    
+  </channel>
+</rss>
