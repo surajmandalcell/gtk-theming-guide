@@ -9,18 +9,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
-    <title>Gtk Theming Guide</title>
+    <title>Getting started - Gtk Theming Guide</title>
     <meta name="generator" content="Hugo 0.37" />
 
     
     <meta name="description" content="Documentation for people wanting to create their own gtk theme">
     
-    <link rel="canonical" href="https://surajmandalcell.github.io/Gtk-Theming-Guide/">
+    <link rel="canonical" href="https://surajmandalcell.github.io/Gtk-Theming-Guide/getting-started/">
     
     <meta name="author" content="Suraj Mandal">
     
 
-    <meta property="og:url" content="https://surajmandalcell.github.io/Gtk-Theming-Guide/">
+    <meta property="og:url" content="https://surajmandalcell.github.io/Gtk-Theming-Guide/getting-started/">
     <meta property="og:title" content="Gtk Theming Guide">
     
     <meta name="apple-mobile-web-app-title" content="Gtk Theming Guide">
@@ -69,9 +69,6 @@
     <script src="https://surajmandalcell.github.io/Gtk-Theming-Guide/javascripts/modernizr.js"></script>
 
     
-    <link href="https://surajmandalcell.github.io/Gtk-Theming-Guide/index.xml" rel="alternate" type="application/rss+xml" title="Gtk Theming Guide" />
-    <link href="https://surajmandalcell.github.io/Gtk-Theming-Guide/index.xml" rel="feed" type="application/rss+xml" title="Gtk Theming Guide" />
-    
 
   </head>
   <body class="palette-primary-brown palette-accent-blue-grey">
@@ -100,7 +97,7 @@
     </div>
     <div class="stretch">
       <div class="title">
-        Gtk Theming Guide
+        Getting started
       </div>
     </div>
 
@@ -183,9 +180,27 @@
 
 
 
-<a class="current" title="Introduction" href="./Gtk-Theming-Guide/Gtk-Theming-Guide/">
+<a  title="Introduction" href="../Gtk-Theming-Guide/Gtk-Theming-Guide/">
 	
 	Introduction
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a class="current" title="Getting started" href="../Gtk-Theming-Guide/getting-started/">
+	
+	Getting started
 </a>
 
 
@@ -204,25 +219,7 @@
 
 
 
-<a  title="Getting started" href="./Gtk-Theming-Guide/getting-started/">
-	
-	Getting started
-</a>
-
-
-
-  
-</li>
-
-
-
-<li>
-  
-    
-
-
-
-<a  title="Creating GTK3 Themes" href="./Gtk-Theming-Guide/creating-gtk3-themes/">
+<a  title="Creating GTK3 Themes" href="../Gtk-Theming-Guide/creating-gtk3-themes/">
 	
 	Creating GTK3 Themes
 </a>
@@ -240,7 +237,7 @@
 
 
 
-<a  title="Creating Icon Theme" href="./Gtk-Theming-Guide/creating-icon-theme/">
+<a  title="Creating Icon Theme" href="../Gtk-Theming-Guide/creating-icon-theme/">
 	
 	Creating Icon Theme
 </a>
@@ -258,7 +255,7 @@
 
 
 
-<a  title="License" href="./Gtk-Theming-Guide/license/">
+<a  title="License" href="../Gtk-Theming-Guide/license/">
 	
 	License
 </a>
@@ -311,25 +308,48 @@
 
 	<article class="article">
 		<div class="wrapper">
-			
-				<h1>Gtk Theming Documentation </h1>
-
-				
-
-<h2 id="overview">Overview</h2>
-
-<h3 id="if-you-are-a-linux-user-and-unsatisfied-with-the-current-theme-collection-want-to-create-new-theme-or-modify-current-one-then-this-documentation-is-for-you">If you are a linux user and unsatisfied with the current theme collection want to create new theme or modify current one then this documentation is for you</h3>
-
-<p>Many Linux desktops supporting themes. A theme is a particular appearance or &ldquo;****&rdquo; for the GUI. Users can change the theme to make the desktop look different. Usually, users also change the icons. However, the theme and icon-pack are two separate entities. Numerous people want to make their own theme, so here is an article about making GTK themes as well as various essential information.</p>
-
-<p><img src="img/home_img_header.png" alt="make it look better" /></p>
-
-<p>NOTE: This article primarily focuses on GTK3, but it will discuss a little about GTK2, Metacity, and others. Cursors and icons will not be discussed in this article.</p>
-
-<p>See the <a href="./Gtk-Theming-Guide/getting-started/">getting started guide</a> for instructions how to get
-it up and running.</p>
+			<h1>Getting started </h1>
 
 			
+
+<h2 id="basic-concepts">Basic Concepts</h2>
+
+<p>The GIMP ToolKit (GTK) is a widget-toolkit used to create GUIs on a variety of systems (thus making GTK cross-platform). GTK (<a href="http://www.gtk.org/">http://www.gtk.org/</a>) is commonly and incorrectly thought to stand for &ldquo;GNOME ToolKit&rdquo;, but is actually stands for &ldquo;GIMP ToolKit&rdquo; because it was first created to design an user interface for GIMP. GTK is an object-oriented toolkit written in C (GTK itself is not a language). GTK is entirely open-source under the LGPL license. GTK is a widely used toolkit for GUIs and many tools are available for GTK.</p>
+
+<p>Themes made for GTK will not work in Qt-based applications. A Qt-theme is needed to apply a theme to Qt applications.</p>
+
+<p>The themes use Cascading Style-Sheets (CSS) to generate the theme&rsquo;s appearance. This is the same CSS that web-developers use on web-pages. However, instead of HTML tags being referenced, GTK widgets are specified. It is important that theme developers learn CSS.</p>
+
+<h2 id="theme-location">Theme Location</h2>
+
+<pre><code class="language-sh">$XDG_CONFIG_HOME/gtk-3.0/gtk.css (typically ~/.config/gtk-3.0/gtk.css)
+
+  
+~/.themes/NAME/gtk-3.0/gtk.css 
+
+
+$datadir/share/themes/NAME/gtk-3.0/gtk.css (typically
+ /usr/share/themes/name/gtk-3.0/gtk.css)
+</code></pre>
+
+<p><strong><em>NOTE</em></strong>: &ldquo;<strong>NAME</strong>&rdquo; is a placeholder for the name of the current theme.</p>
+
+<p>If there are two themes with the same name, then the one in the user&rsquo;s home folder (~/.themes) will be used. Developers can take advantage of GTK&rsquo;s theme-seeking algorithm by testing new themes in their local home&rsquo;s theme directory.</p>
+
+<h3 id="theme-engines">Theme Engines</h3>
+
+<p>A &ldquo;Theme engine&rdquo; is a piece of software that changes the look of the GUI&rsquo;s widgets. The engine reads and uses the theme&rsquo;s files to know how the various widgets should be drawn. Some engines come with themes of their own. Each engine has its advantages and disadvantages, and some engines add special properties and features.</p>
+
+<p>Many theme-engines can be obtained from the default repositories. Debian-based Linux distros can execute &ldquo;apt-get install gtk2-engines-murrine gtk2-engines-pixbuf gtk3-engines-unico&rdquo; to install three different engines. Many engines are available for both GTK2 and GTK3. Below is a small list of examples.</p>
+
+<ul>
+<li>gtk2-engines-aurora - Aurora GTK2 engine</li>
+<li>gtk2-engines-pixbuf - Pixbuf GTK2 engine</li>
+<li>gtk3-engines-oxygen - Engine port of the Oxygen widget style to GTK</li>
+<li>gtk3-engines-unico - Unico GTK3 engine</li>
+<li>gtk3-engines-xfce - GTK3 engine for Xfce</li>
+</ul>
+
 
 			<aside class="copyright" role="note">
 				
@@ -344,23 +364,21 @@ it up and running.</p>
 			<footer class="footer">
 				
 
-
-
 <nav class="pagination" aria-label="Footer">
   <div class="previous">
+  
   </div>
 
-  
-  
   <div class="next">
-      <a href="https://surajmandalcell.github.io/Gtk-Theming-Guide/tags/" title="Tags">
+  
+      <a href="https://surajmandalcell.github.io/Gtk-Theming-Guide/creating-gtk3-themes/" title="Creating GTK3 Themes">
         <span class="direction">
           Next
         </span>
         <div class="page">
           <div class="stretch">
             <div class="title">
-              Tags
+              Creating GTK3 Themes
             </div>
           </div>
           <div class="button button-next" role="button" aria-label="Next">
@@ -368,8 +386,11 @@ it up and running.</p>
           </div>
         </div>
       </a>
+  
   </div>
 </nav>
+
+
 
 
 

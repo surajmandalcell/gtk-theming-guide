@@ -47,26 +47,26 @@ googleAnalytics = "UA-92801593-1"
 [[menu.main]]
     name   = "Introduction"
     url    = "/"
-    weight = 0
+    weight = 5
 
 [[menu.main]]
     name   = "Getting started"
-    url    = "getting-started/"
+    url    = "getting-started"
     weight = 10
 
 [[menu.main]]
     name   = "Creating GTK3 Themes"
-    url    = "creating-gtk3-themes/"
+    url    = "creating-gtk3-themes"
     weight = 20
 
 [[menu.main]]
     name   = "Creating Icon Theme"
-    url    = "creating-icon-theme/"
+    url    = "creating-icon-theme"
     weight = 30
 
 [[menu.main]]
     name   = "License"
-    url    = "license/"
+    url    = "license"
     weight = 40
 
 [blackfriday]

@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+  
+  
+  
+  
+   <html class="no-js"> 
+
+  <head lang="en-us">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <title>Creating Icon Theme - Gtk Theming Guide</title>
+    <meta name="generator" content="Hugo 0.37" />
+
+    
+    <meta name="description" content="Documentation for people wanting to create their own gtk theme">
+    
+    <link rel="canonical" href="https://surajmandalcell.github.io/Gtk-Theming-Guide/creating-icon-theme/">
+    
+    <meta name="author" content="Suraj Mandal">
+    
+
+    <meta property="og:url" content="https://surajmandalcell.github.io/Gtk-Theming-Guide/creating-icon-theme/">
+    <meta property="og:title" content="Gtk Theming Guide">
+    
+    <meta name="apple-mobile-web-app-title" content="Gtk Theming Guide">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://surajmandalcell.github.io/Gtk-Theming-Guide/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://surajmandalcell.github.io/Gtk-Theming-Guide/images/favicon.ico">
+
+    <style>
+      @font-face {
+        font-family: 'Icon';
+        src: url('https://surajmandalcell.github.io/Gtk-Theming-Guide/fonts/icon.eot');
+        src: url('https://surajmandalcell.github.io/Gtk-Theming-Guide/fonts/icon.eot')
+               format('embedded-opentype'),
+             url('https://surajmandalcell.github.io/Gtk-Theming-Guide/fonts/icon.woff')
+               format('woff'),
+             url('https://surajmandalcell.github.io/Gtk-Theming-Guide/fonts/icon.ttf')
+               format('truetype'),
+             url('https://surajmandalcell.github.io/Gtk-Theming-Guide/fonts/icon.svg')
+               format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://surajmandalcell.github.io/Gtk-Theming-Guide/stylesheets/application.css">
+    <link rel="stylesheet" href="https://surajmandalcell.github.io/Gtk-Theming-Guide/stylesheets/temporary.css">
+    <link rel="stylesheet" href="https://surajmandalcell.github.io/Gtk-Theming-Guide/stylesheets/palettes.css">
+    <link rel="stylesheet" href="https://surajmandalcell.github.io/Gtk-Theming-Guide/stylesheets/highlight/highlight.css">
+
+    
+    
+    
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu&#43;Mono">
+    <style>
+      body, input {
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+      }
+      pre, code {
+        font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+      }
+    </style>
+
+    
+    <script src="https://surajmandalcell.github.io/Gtk-Theming-Guide/javascripts/modernizr.js"></script>
+
+    
+
+  </head>
+  <body class="palette-primary-brown palette-accent-blue-grey">
+
+
+
+	
+	
+
+
+<div class="backdrop">
+	<div class="backdrop-paper"></div>
+</div>
+
+<input class="toggle" type="checkbox" id="toggle-drawer">
+<input class="toggle" type="checkbox" id="toggle-search">
+<label class="toggle-button overlay" for="toggle-drawer"></label>
+
+<header class="header">
+	<nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        Creating Icon Theme
+      </div>
+    </div>
+
+    
+    <div class="button button-twitter" role="button" aria-label="Twitter">
+       <a href="https://twitter.com/surajmandalcell" title="@surajmandalcell on Twitter" target="_blank" class="toggle-button icon icon-twitter"></a>
+    </div>
+    
+
+    
+    <div class="button button-github" role="button" aria-label="GitHub">
+      <a href="https://github.com/surajmandalcell" title="@surajmandalcell on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+    </div>
+    
+    
+        
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main class="main">
+	<div class="drawer">
+		<nav aria-label="Navigation">
+  <a href="https://github.com/surajmandalcell/Gtk-Theming-Guide" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>Gtk Theming Guide <span class="version">1.0.0</span></strong>
+        
+          <br>
+          surajmandalcell/Gtk-Theming-Guide
+        
+      </div>
+    </div>
+  </a>
+
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            <a href="https://github.com/surajmandalcell/Gtk-Theming-Guide/archive/master.zip" target="_blank" title="Download" data-action="download">
+              <i class="icon icon-download"></i> Download
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/surajmandalcell/Gtk-Theming-Guide/stargazers" target="_blank" title="Stargazers" data-action="star">
+              <i class="icon icon-star"></i> Stars
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+
+      <div class="toc">
+        
+        <ul>
+          
+
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Introduction" href="../Gtk-Theming-Guide/Gtk-Theming-Guide/">
+	
+	Introduction
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Getting started" href="../Gtk-Theming-Guide/getting-started/">
+	
+	Getting started
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Creating GTK3 Themes" href="../Gtk-Theming-Guide/creating-gtk3-themes/">
+	
+	Creating GTK3 Themes
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a class="current" title="Creating Icon Theme" href="../Gtk-Theming-Guide/creating-icon-theme/">
+	
+	Creating Icon Theme
+</a>
+
+
+<ul id="scrollspy">
+</ul>
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="License" href="../Gtk-Theming-Guide/license/">
+	
+	License
+</a>
+
+
+
+  
+</li>
+
+
+        </ul>
+        
+
+        
+        <hr>
+        <span class="section">The author</span>
+        
+        <ul>
+          
+          <li>
+            <a href="https://twitter.com/surajmandalcell" target="_blank" title="@surajmandalcell on Twitter">
+              @surajmandalcell on Twitter
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://github.com/surajmandalcell" target="_blank" title="@surajmandalcell on GitHub">
+              @surajmandalcell on GitHub
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="mailto:cruelplatypus67@gmail.com" title="Email of cruelplatypus67@gmail.com">
+              Contact via email
+            </a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+	</div>
+
+	<article class="article">
+		<div class="wrapper">
+			<h1>Creating Icon Theme </h1>
+
+			
+
+<h2 id="creating-icon-theme">Creating Icon Theme</h2>
+
+<p>Not only can Linux users customize the desktop theme, but they can also change the icons. Icon-theme packs are easy to make, install, and obtain. Many Linux users may find it helpful to learn how to change icons, edit them, get more, etc.</p>
+
+<h2 id="icon-location">Icon Location</h2>
+
+<p>Icons may be stored in &ldquo;~/.icons&rdquo; or &ldquo;/usr/share/icons&rdquo;. Icons that are in &ldquo;~/.icons&rdquo; are only accessible to the owner of that home folder. While icons in &ldquo;/usr/share/icons&rdquo; are global-icons that are accessible by all users. &ldquo;/usr/share/pixmaps&rdquo; contains icons that are installed or used by various applications and software packages.</p>
+
+<h2 id="icon-searching">Icon Searching</h2>
+
+<p>Applications that are looking for an icon will first look in &ldquo;~/.icons&rdquo;. Next, the application will try &ldquo;/usr/share/icons&rdquo;, and then &ldquo;/usr/share/pixmaps&rdquo;.</p>
+
+<h2 id="icon-theme">Icon Theme</h2>
+
+<p>An icon theme has a specific structure/format that must be used to create a usable icon-pack. Inside the icon directories (&rdquo;~/.icons&rdquo; and &ldquo;/usr/share/icons&rdquo;), each icon theme has its own folder that is named after the icon-theme. Within the icon-theme&rsquo;s directory are several folders and some important files. For instance, an icon-theme may contain the below listed directories and files.
+Directories</p>
+
+<ul>
+<li>8x8</li>
+<li>16x16</li>
+<li>22x22</li>
+<li>24x24</li>
+<li>32x32</li>
+<li>48x48</li>
+<li>52x52</li>
+<li>128x128</li>
+<li>240x240</li>
+<li>256x256</li>
+<li>512x512</li>
+<li>scalable</li>
+<li>scalable-up-to-32</li>
+<li>Files</li>
+<li>AUTHORS</li>
+<li>CONTRIBUTORS</li>
+<li>COPYING</li>
+<li>cursor.theme</li>
+<li>icon-theme.cache</li>
+<li>index.theme</li>
+<li>Adwaita-Icon-Theme-Folder.jpg</li>
+</ul>
+
+<p>The directories contain images and icons with the specified dimensions used as the folder names (in pixels).</p>
+
+<p>However, &ldquo;scalable&rdquo; and &ldquo;scalable-up-to-32&rdquo; contain SVG files. The SVG files in &ldquo;scalable-up-to-32&rdquo; can be used without issues when used at 32-pixels or below. Within each directory are more folders as listed and described below. Each of these sub-directories may contain SVG, PNG, or XPM files (PNG is recommended).</p>
+
+<p>Each file must use a particular name so that the desktop system can find the icon that it needs. Soft-links (shortcuts) are permitted because they allow developers to create one image that can be the icon for many uses (such as using the same image for all types of mount optical disks).</p>
+
+<p>To learn more about the filenames for icons, refer to the naming specification - <a href="http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html">freedesktop referance page</a></p>
+
+<ul>
+<li>actions - Icons for actions (such as redo, close, play, etc.) that may be seen in toolbars, menus, buttons, etc.</li>
+<li>animations - Images that are used to make animated icons (such as &ldquo;loading spinners&rdquo; or disc-burning progress)</li>
+<li>apps - Icons for specific applications or for applications of a general type</li>
+<li>categories - Icons for various application categories</li>
+<li>devices - Icons for devices such as mounted storage media, optical disks, iPods, phones, printers, etc.</li>
+<li>emblems - Icons for tags and file properties (such as the &ldquo;unreadable&rdquo; or &ldquo;soft-link&rdquo; symbol)</li>
+<li>emotes - Emoticons/Emojis</li>
+<li>International - Icons representing different languages/nations</li>
+<li>mimetypes (or mimes) - Icons for various mimetypes; these are typically used as the icons for files</li>
+<li>places - Icons for folders, servers, trash-bin, etc.</li>
+<li>search - Images for search-related icons</li>
+<li>status - Icons used for notifications (like &ldquo;error&rdquo;, &ldquo;warning&rdquo;, etc.), battery level, audio volume, network status, etc.</li>
+<li>stock - Miscellaneous</li>
+<li>web - Icons for web-apps (like the web-apps commonly seen in the Unity dashboard)</li>
+</ul>
+
+<p>The icon images themselves can be made using Gimp (when making PNG files) and Inkscape (when making SVG files). All icon images must be a perfect square. Thus, the &ldquo;32x32&rdquo; icons must be 32 pixels tall and 32 pixels wide. RGBa is recommended, especially for the transparency layer (alpha-channel).</p>
+
+<p>Some icon-themes (like &ldquo;Humanity&rdquo;) use a slightly different format. The &ldquo;Humanity&rdquo; icon-pack contains folders for each icon context (emotes, devices, places, etc.) and then the different sizes as sub-directories. The sub-directories for each icon size uses the name format &ldquo;22&rdquo; rather than &ldquo;22x22&rdquo;.</p>
+
+<p>The files in the root of the icon-theme each have a particular purpose as described below.
+AUTHORS - List of authors and possibly their contact information and website
+CONTRIBUTORS - List of people that helped with the project
+COPYING - The license (such as GPL)
+cursor.theme - Cursor-theme information
+icon-theme.cache - Icon cache that are used as memory mapped files; the files directly map the icons files, thus reducing the time to find a needed icon
+index.theme - The icon-theme description file; encoded in UTF-8</p>
+
+<p>FUN FACT: The &ldquo;gtk-update-icon-cache&rdquo; command can be used to update/refresh the icon cache files.</p>
+
+<p>Sample index.theme
+Code:</p>
+
+<pre><code>[Icon Theme]
+Name=Theme_Name
+Name[ca]=Translated_Name
+Name[cs]=Translated_Name
+Name[da]=Translated_Name
+Comment=Theme_Description
+Comment[ca]=Translated_Theme_Description
+Comment[cs]=Translated_Theme_Description
+Comment[da]=Translated_Theme_Description
+Inherits=Name_a_Theme_to_use_as_a_Fallback
+</code></pre>
+
+<h2 id="kde-specific-settings">KDE specific settings</h2>
+
+<pre><code>DisplayDepth=32
+LinkOverlay=link_overlay
+LockOverlay=lock_overlay
+ZipOverlay=zip_overlay
+DesktopDefault=48
+DesktopSizes=16,22,32,48,64,72,96,128
+ToolbarDefault=22
+ToolbarSizes=16,22,32,48
+MainToolbarDefault=22
+MainToolbarSizes=16,22,32,48
+SmallDefault=16
+SmallSizes=16
+PanelDefault=32
+PanelSizes=16,22,32,48,64,72,96,128
+</code></pre>
+
+<h2 id="list-all-directories">List all directories</h2>
+
+<pre><code>Directories=8x8/emblems,16x16/actions,16x16/apps,
+</code></pre>
+
+<h2 id="specify-the-context-size-and-type-of-each-directory">Specify the context, size, and type of each directory</h2>
+
+<p>[8x8/emblems]
+Context=Emblems
+Size=8
+Type=Fixed
+Installing and Removing Icons
+Icon themes can be installed by placing the icon-pack in one of the proper icon directories. If the icons are placed in &ldquo;/usr/share/icons&rdquo;, then ensure that the owner is &ldquo;Root&rdquo; and the proper permissions are set so that all users can read the files.</p>
+
+<p>To recursively set the proper permissions and ownership to all folders and files in the icon-pack, execute the below commands. Open a terminal in &ldquo;/usr/share/icons&rdquo; before executing the commands.</p>
+
+<p>Code:</p>
+
+<pre><code>chown -R root:root ./THEME_NAME
+find ./THEME_NAME -type d -exec chmod 755 {} \;
+find ./THEME_NAME -type f -exec chmod 644 {} \;
+</code></pre>
+
+<p>NOTE: Directories must use &ldquo;755&rdquo; permissions (drwxr-xr-x) and files must use &ldquo;644&rdquo; permissions (rw-r&ndash;r&ndash;). This is better for security while ensuring that users and programs can access the data.</p>
+
+<p>To remove icon themes, delete the icon-pack&rsquo;s directory.</p>
+
+<p>Obtaining Icons
+Icons can be obtained via the repositories or from various websites.
+GNOME-Look - <a href="http://gnome-look.org/index.php?xcontentmode=120x121">http://gnome-look.org/index.php?xcontentmode=120x121</a>
+Noobs Lab - <a href="http://www.noobslab.com/p/themes-icons.html">http://www.noobslab.com/p/themes-icons.html</a></p>
+
+<p>Changing Icons
+Most theme changers also provide an interface for changing the icons. Such applications include &ldquo;Ubuntu Tweak&rdquo;, &ldquo;Unity Tweak Tool&rdquo;, &ldquo;Appearance&rdquo;, and others.</p>
+
+<h2 id="cursors">Cursors</h2>
+
+<p>Cursors are also found in &ldquo;~/.icons&rdquo; and &ldquo;/usr/share/icons&rdquo;. Cursor-themes use a similar format. However, the folder contains a &ldquo;cursors&rdquo; directory and two files - &ldquo;cursor.theme&rdquo; and &ldquo;index.theme&rdquo;. Inside of the &ldquo;cursors&rdquo; directory are files that are each named after each type of cursor (top_left_corner, help, move, grabbing, etc.).</p>
+
+<p>These files are &ldquo;X11 cursor images&rdquo; and they have the &ldquo;image/x-xcursor&rdquo; mimetype. This type of image file contains multiple images. Each contained image is 48, 32, and 24 pixels in height and width; the images support the alpha-layer (transparency/RGBa). Gimp supports X11 cursor images and represents the contained sub-images as different layers. Each layer must be named using the format &ldquo;(SIZEpx)_1 (50ms) (replace)&ldquo;, where &ldquo;SIZE&rdquo; is the width/height in pixels.</p>
+
+<p>All cursors that are drawn in these images must be in the center of the space (whether the space be 48x48 pixels or some other size).</p>
+
+<h2 id="further-reading">Further Reading</h2>
+
+<p>Graphical User Interface (GUI) Reading Guide - <a href="http://www.linux.org/threads/gui-reading-guide.6471/">http://www.linux.org/threads/gui-reading-guide.6471/</a></p>
+
+<p>Icon Theme Specification - <a href="http://www.freedesktop.org/wiki/Specifications/icon-theme-spec/">http://www.freedesktop.org/wiki/Specifications/icon-theme-spec/</a></p>
+
+<p>Icon Naming Specification - <a href="http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html">http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html</a></p>
+
+<p>Icon Theme Specification (single page) - <a href="http://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html">http://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html</a></p>
+
+<p>Tango Icon Library - <a href="http://tango.freedesktop.org/Tango_Icon_Library">http://tango.freedesktop.org/Tango_Icon_Library</a></p>
+
+<p>Tango Icon Theme Guidelines - <a href="http://tango.freedesktop.org/Generic_Icon_Theme_Guidelines">http://tango.freedesktop.org/Generic_Icon_Theme_Guidelines</a></p>
+
+
+			<aside class="copyright" role="note">
+				
+				&copy; 2018 Released under the MIT license &ndash;
+				
+				Documentation built with
+				<a href="https://www.gohugo.io" target="_blank">Hugo</a>
+				using the
+				<a href="http://github.com/digitalcraftsman/hugo-material-docs" target="_blank">Material</a> theme.
+			</aside>
+
+			<footer class="footer">
+				
+
+<nav class="pagination" aria-label="Footer">
+  <div class="previous">
+  
+      <a href="https://surajmandalcell.github.io/Gtk-Theming-Guide/creating-gtk3-themes/" title="Creating GTK3 Themes">
+        <span class="direction">
+          Previous
+        </span>
+        <div class="page">
+          <div class="button button-previous" role="button" aria-label="Previous">
+            <i class="icon icon-back"></i>
+          </div>
+          <div class="stretch">
+            <div class="title">
+              Creating GTK3 Themes
+            </div>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+
+  <div class="next">
+  
+      <a href="https://surajmandalcell.github.io/Gtk-Theming-Guide/license/" title="License">
+        <span class="direction">
+          Next
+        </span>
+        <div class="page">
+          <div class="stretch">
+            <div class="title">
+              License
+            </div>
+          </div>
+          <div class="button button-next" role="button" aria-label="Next">
+            <i class="icon icon-forward"></i>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+</nav>
+
+
+
+
+
+			</footer>
+		</div>
+	</article>
+
+	<div class="results" role="status" aria-live="polite">
+		<div class="scrollable">
+			<div class="wrapper">
+				<div class="meta"></div>
+				<div class="list"></div>
+			</div>
+		</div>
+	</div>
+</main>
+
+    <script>
+    
+      var base_url = 'https:\/\/surajmandalcell.github.io\/Gtk-Theming-Guide\/';
+      var repo_id  = 'surajmandalcell\/Gtk-Theming-Guide';
+    
+    </script>
+
+    <script src="https://surajmandalcell.github.io/Gtk-Theming-Guide/javascripts/application.js"></script>
+    
+
+    <script>
+      /* Add headers to scrollspy */
+      var headers   = document.getElementsByTagName("h2");
+      var scrollspy = document.getElementById('scrollspy');
+
+      if(scrollspy) {
+        if(headers.length > 0) {
+          for(var i = 0; i < headers.length; i++) {
+            var li = document.createElement("li");
+            li.setAttribute("class", "anchor");
+
+            var a  = document.createElement("a");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", headers[i].innerHTML);
+            a.innerHTML = headers[i].innerHTML;
+
+            li.appendChild(a)
+            scrollspy.appendChild(li);
+          }
+        } else {
+          scrollspy.parentElement.removeChild(scrollspy)
+        }
+
+
+        /* Add permanent link next to the headers */
+        var headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+
+        for(var i = 0; i < headers.length; i++) {
+            var a = document.createElement("a");
+            a.setAttribute("class", "headerlink");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", "Permanent link")
+            a.innerHTML = "#";
+            headers[i].appendChild(a);
+        }
+      }
+    </script>
+
+    
+      <script>
+        (function(i,s,o,g,r,a,m){
+          i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||
+          []).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;
+          m.parentNode.insertBefore(a,m)
+        })(window, document,
+          'script', '//www.google-analytics.com/analytics.js', 'ga');
+         
+        ga('create', 'UA-92801593-1', 'auto');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+         
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
+         
+        var query = document.querySelector('.query');
+        query.addEventListener('blur', function() {
+          if (this.value) {
+            var path = document.location.pathname;
+            ga('send', 'pageview', path + '?q=' + this.value);
+          }
+        });
+      </script>
+    
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
+

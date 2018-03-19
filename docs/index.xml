@@ -6,17 +6,56 @@
     <description>Recent content on Gtk Theming Guide</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Mar 2016 21:07:13 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 09 Mar 2016 00:11:02 +0100</lastBuildDate>
     
 	<atom:link href="https://surajmandalcell.github.io/Gtk-Theming-Guide/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Getting started</title>
+      <link>https://surajmandalcell.github.io/Gtk-Theming-Guide/getting-started/</link>
+      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
+      
+      <guid>https://surajmandalcell.github.io/Gtk-Theming-Guide/getting-started/</guid>
+      <description>Basic Concepts The GIMP ToolKit (GTK) is a widget-toolkit used to create GUIs on a variety of systems (thus making GTK cross-platform). GTK (http://www.gtk.org/) is commonly and incorrectly thought to stand for &amp;ldquo;GNOME ToolKit&amp;rdquo;, but is actually stands for &amp;ldquo;GIMP ToolKit&amp;rdquo; because it was first created to design an user interface for GIMP. GTK is an object-oriented toolkit written in C (GTK itself is not a language). GTK is entirely open-source under the LGPL license.</description>
+    </item>
+    
+    <item>
+      <title>Creating GTK3 Themes</title>
+      <link>https://surajmandalcell.github.io/Gtk-Theming-Guide/creating-gtk3-themes/</link>
+      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
+      
+      <guid>https://surajmandalcell.github.io/Gtk-Theming-Guide/creating-gtk3-themes/</guid>
+      <description>Creating GTK3 Themes To create a GTK3 theme, developers can start with an empty file or they can use a pre-existing theme as a template. It may help beginners to start with a pre-existing theme. For instance, a theme can be copied to the user&amp;rsquo;s home folder and then the developer can start editing the files.
+The general format for a GTK3 theme is to create a folder named after the theme.</description>
+    </item>
+    
+    <item>
+      <title>Creating Icon Theme</title>
+      <link>https://surajmandalcell.github.io/Gtk-Theming-Guide/creating-icon-theme/</link>
+      <pubDate>Thu, 09 Mar 2017 00:11:02 +0100</pubDate>
+      
+      <guid>https://surajmandalcell.github.io/Gtk-Theming-Guide/creating-icon-theme/</guid>
+      <description>Creating Icon Theme Not only can Linux users customize the desktop theme, but they can also change the icons. Icon-theme packs are easy to make, install, and obtain. Many Linux users may find it helpful to learn how to change icons, edit them, get more, etc.
+Icon Location Icons may be stored in &amp;ldquo;~/.icons&amp;rdquo; or &amp;ldquo;/usr/share/icons&amp;rdquo;. Icons that are in &amp;ldquo;~/.icons&amp;rdquo; are only accessible to the owner of that home folder.</description>
+    </item>
+    
+    <item>
+      <title>License</title>
+      <link>https://surajmandalcell.github.io/Gtk-Theming-Guide/license/</link>
+      <pubDate>Wed, 09 Mar 2016 20:10:46 +0100</pubDate>
+      
+      <guid>https://surajmandalcell.github.io/Gtk-Theming-Guide/license/</guid>
+      <description>The theme used to make this documentation hugo-material-docks by Martin Donah
+Copyright (c) 2016 Digitalcraftsman &amp;lt;digitalcraftsman@protonmail.com&amp;gt;&amp;lt;br&amp;gt; Copyright (c) 2016 Martin Donath &amp;lt;martin.donath@squidfunk.com&amp;gt; Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &amp;quot;Software&amp;quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</description>
+    </item>
+    
+    <item>
       <title>Gtk Theming Documentation</title>
-      <link>https://surajmandalcell.github.io/Gtk-Theming-Guide/</link>
+      <link>https://surajmandalcell.github.io/Gtk-Theming-Guide/main/</link>
       <pubDate>Tue, 08 Mar 2016 21:07:13 +0100</pubDate>
       
-      <guid>https://surajmandalcell.github.io/Gtk-Theming-Guide/</guid>
+      <guid>https://surajmandalcell.github.io/Gtk-Theming-Guide/main/</guid>
       <description>Overview If you are a linux user and unsatisfied with the current theme collection want to create new theme or modify current one then this documentation is for you Many Linux desktops supporting themes. A theme is a particular appearance or &amp;ldquo;****&amp;rdquo; for the GUI. Users can change the theme to make the desktop look different. Usually, users also change the icons. However, the theme and icon-pack are two separate entities.</description>
     </item>
     
