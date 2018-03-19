@@ -8,7 +8,7 @@ googleAnalytics = "UA-92801593-1"
 
 [params]
     # General information
-    author = "surajmandalcell"
+    author = "Suraj Mandal"
     description = "Documentation for people wanting to create their own gtk theme"
     copyright = "Released under the MIT license"
 
@@ -68,11 +68,6 @@ googleAnalytics = "UA-92801593-1"
     name   = "License"
     url    = "license/"
     weight = 40
-
-# [[menu.main]]
-#   name   = "About"
-#   url    = "about/"
-#   weight = 60
 
 [blackfriday]
     smartypants = true

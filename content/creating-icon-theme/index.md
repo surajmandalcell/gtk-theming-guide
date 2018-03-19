@@ -49,7 +49,7 @@ However, "scalable" and "scalable-up-to-32" contain SVG files. The SVG files in 
 
  Each file must use a particular name so that the desktop system can find the icon that it needs. Soft-links (shortcuts) are permitted because they allow developers to create one image that can be the icon for many uses (such as using the same image for all types of mount optical disks).
  
- To learn more about the filenames for icons, refer to the naming specification - [freedesktop referance page](https://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html)
+ To learn more about the filenames for icons, refer to the naming specification - [freedesktop referance page](http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html)
 
 
 - actions - Icons for actions (such as redo, close, play, etc.) that may be seen in toolbars, menus, buttons, etc.
@@ -143,8 +143,8 @@ To remove icon themes, delete the icon-pack's directory.
 
 Obtaining Icons
 Icons can be obtained via the repositories or from various websites.
-GNOME-Look - https://gnome-look.org/index.php?xcontentmode=120x121
-Noobs Lab - https://www.noobslab.com/p/themes-icons.html
+GNOME-Look - http://gnome-look.org/index.php?xcontentmode=120x121
+Noobs Lab - http://www.noobslab.com/p/themes-icons.html
 
 Changing Icons
 Most theme changers also provide an interface for changing the icons. Such applications include "Ubuntu Tweak", "Unity Tweak Tool", "Appearance", and others.
@@ -159,14 +159,14 @@ All cursors that are drawn in these images must be in the center of the space (w
 
 ## Further Reading
 
-Graphical User Interface (GUI) Reading Guide - https://www.linux.org/threads/gui-reading-guide.6471/
+Graphical User Interface (GUI) Reading Guide - http://www.linux.org/threads/gui-reading-guide.6471/
 
-Icon Theme Specification - https://www.freedesktop.org/wiki/Specifications/icon-theme-spec/
+Icon Theme Specification - http://www.freedesktop.org/wiki/Specifications/icon-theme-spec/
 
-Icon Naming Specification - https://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html
+Icon Naming Specification - http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html
 
-Icon Theme Specification (single page) - https://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html
+Icon Theme Specification (single page) - http://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html
 
-Tango Icon Library - https://tango.freedesktop.org/Tango_Icon_Library
+Tango Icon Library - http://tango.freedesktop.org/Tango_Icon_Library
 
-Tango Icon Theme Guidelines - https://tango.freedesktop.org/Generic_Icon_Theme_Guidelines
+Tango Icon Theme Guidelines - http://tango.freedesktop.org/Generic_Icon_Theme_Guidelines
