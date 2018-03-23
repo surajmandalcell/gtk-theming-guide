@@ -1,0 +1,844 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="https://surajmandalcell.github.io/Gtk-Theming-Guide/creating-gtk3-themes/">
+      
+      
+        <meta name="author" content="surajmandalcell">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.1">
+    
+    
+      
+        <title>Creating GTK3 Themes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.78aab2dc.css">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#creating-gtk3-themes" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://surajmandalcell.github.io/Gtk-Theming-Guide/" title="Gtk Theming Guide" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Gtk Theming Guide
+              </span>
+              <span class="md-header-nav__topic">
+                Creating gtk3 themes
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/surajmandalcell/Gtk-Theming-Guide/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    Gtk Theming Guide
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/surajmandalcell/Gtk-Theming-Guide/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../getting-started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Creating gtk3 themes
+      </label>
+    
+    <a href="./" title="Creating gtk3 themes" class="md-nav__link md-nav__link--active">
+      Creating gtk3 themes
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-gtk3-themes" title="Creating GTK3 Themes" class="md-nav__link">
+    Creating GTK3 Themes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-themes" title="Testing Themes" class="md-nav__link">
+    Testing Themes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theme-downloads" title="Theme Downloads" class="md-nav__link">
+    Theme Downloads
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" title="Further Reading" class="md-nav__link">
+    Further Reading
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../creating-icon-theme/" title="Creating icon theme" class="md-nav__link">
+      Creating icon theme
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-gtk3-themes" title="Creating GTK3 Themes" class="md-nav__link">
+    Creating GTK3 Themes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-themes" title="Testing Themes" class="md-nav__link">
+    Testing Themes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theme-downloads" title="Theme Downloads" class="md-nav__link">
+    Theme Downloads
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" title="Further Reading" class="md-nav__link">
+    Further Reading
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/surajmandalcell/Gtk-Theming-Guide/edit/master/docs/creating-gtk3-themes/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Creating gtk3 themes</h1>
+                
+                <h2 id="creating-gtk3-themes">Creating GTK3 Themes</h2>
+<p>To create a GTK3 theme, developers can start with an empty file or they can use a pre-existing theme as a template. It may help beginners to start with a pre-existing theme. For instance, a theme can be copied to the user's home folder and then the developer can start editing the files.</p>
+<p>The general format for a GTK3 theme is to create a folder named after the theme. Then, create a sub-directory called "gtk-3.0" and create a file inside of it named "gtk.css". In the "gtk.css" file, use CSS code to control how the theme will look. Move the theme to ~/.themes for testing purposes. Use the newly created theme and make changes as necessary. If desired, developers can add additional components to the theme for GTK2, Openbox, Metacity, Unity, etc.</p>
+<p>To explain how to create themes, we will study the "Ambiance" theme, which is usually found at /usr/share/themes/Ambiance. This directory contains the below listed sub-directories and a file named "index.theme".</p>
+<ul>
+<li>gtk-2.0</li>
+<li>gtk-3.0</li>
+<li>metacity-1</li>
+<li>unity</li>
+</ul>
+<p><br />
+"<strong>index.theme</strong>" contains metadata (such as the theme's name) and some important settings (such as the button layout). Below is the "index.theme" file for "Ambiance".</p>
+<p>code :</p>
+<pre><code class="sh">[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Ambiance
+Comment=Ubuntu Ambiance theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Ambiance
+MetacityTheme=Ambiance
+IconTheme=ubuntu-mono-dark
+CursorTheme=DMZ-White
+ButtonLayout=close,minimize,maximize:
+X-Ubuntu-UseOverlayScrollbars=true
+</code></pre>
+
+<p><br /></p>
+<p>The "<strong>gtk-2.0</strong>" directory contains files for GTK2 such as a "gtkrc" file and an "apps" directory that contains application-specific GTK settings. The "gtkrc" file is the main CSS-file for the GTK2 portion of the theme. Below are the contents of /usr/share/themes/Ambiance/gtk-2.0/apps/nautilus.rc</p>
+<p>code :</p>
+<pre><code class="css"># ==============================================================================
+# NAUTILUS SPECIFIC SETTINGS
+# ==============================================================================
+
+style &quot;nautilus_info_pane&quot; {
+   bg[NORMAL] = @bg_color
+}
+
+widget_class &quot;*Nautilus*&lt;GtkNotebook&gt;*&lt;GtkEventBox&gt;&quot; style &quot;nautilus_info_pane&quot;
+widget_class &quot;*Nautilus*&lt;GtkButton&gt;&quot; style &quot;notebook_button&quot;
+widget_class &quot;*Nautilus*&lt;GtkButton&gt;*&lt;GtkLabel&gt;&quot; style &quot;notebook_button&quot;
+</code></pre>
+
+<p><br /></p>
+<p>The "<strong>gtk-3.0</strong>" directory contains files for GTK3. Instead of "gtkrc", GTK3 uses "gtk.css" as the main theme file. In the Ambiance theme, the file contains one line - '@import url("gtk-main.css");'. The "settings.ini" file contains important theme-wide settings. GTK3 themes use an "apps" directory for the same purpose as GTK2. The "assets" directory contains images for radio buttons, check-boxes, etc. Below are the contents of /usr/share/themes/Ambiance/gtk-3.0/gtk-main.css</p>
+<p>code :</p>
+<pre><code class="css">/*default color scheme */
+@define-color bg_color #f2f1f0;
+@define-color fg_color #4c4c4c;
+@define-color base_color #ffffff;
+@define-color text_color #3C3C3C;
+@define-color selected_bg_color #f07746;
+@define-color selected_fg_color #ffffff;
+@define-color tooltip_bg_color #000000;
+@define-color tooltip_fg_color #ffffff;
+
+/* misc colors used by gtk+
+ *
+ * Gtk doesn't currently expand color variables for style properties. Thus,
+ * gtk-widgets.css uses literal color names, but includes a comment containing
+ * the name of the variable. Please remember to change values there as well
+ * when changing one of the variables below.
+ */
+@define-color info_fg_color rgb (181, 171, 156);
+@define-color info_bg_color rgb (252, 252, 189);
+@define-color warning_fg_color rgb (173, 120, 41);
+@define-color warning_bg_color rgb (250, 173, 61);
+@define-color question_fg_color rgb (97, 122, 214);
+@define-color question_bg_color rgb (138, 173, 212);
+@define-color error_fg_color rgb (235, 235, 235);
+@define-color error_bg_color rgb (223, 56, 44);
+@define-color link_color @selected_bg_color;
+@define-color success_color #4e9a06;
+@define-color error_color #df382c;
+
+/* theme common colors */
+@define-color button_bg_color shade (@bg_color, 1.02); /*shade (#cdcdcd, 1.08);*/
+@define-color notebook_button_bg_color shade (@bg_color, 1.02);
+@define-color button_insensitive_bg_color mix (@button_bg_color, @bg_color, 0.6);
+@define-color dark_bg_color #3c3b37;
+@define-color dark_fg_color #dfdbd2;
+
+@define-color backdrop_fg_color mix (@bg_color, @fg_color, 0.8);
+@define-color backdrop_text_color mix (@base_color, @text_color, 0.8);
+@define-color backdrop_dark_fg_color mix (@dark_bg_color, @dark_fg_color, 0.75);
+/*@define-color backdrop_dark_bg_color mix (@dark_bg_color, @dark_fg_color, 0.75);*/
+@define-color backdrop_selected_bg_color shade (@bg_color, 0.92);
+@define-color backdrop_selected_fg_color @fg_color;
+
+@define-color focus_color alpha (@selected_bg_color, 0.5);
+@define-color focus_bg_color alpha (@selected_bg_color, 0.1);
+
+@define-color shadow_color alpha(black, 0.5);
+
+@define-color osd_fg_color #eeeeec;
+@define-color osd_bg_color alpha(#202526, 0.7);
+@define-color osd_border_color alpha(black, 0.7);
+
+@import url(&quot;gtk-widgets-borders.css&quot;);
+@import url(&quot;gtk-widgets-assets.css&quot;);
+@import url(&quot;gtk-widgets.css&quot;);
+@import url(&quot;apps/geary.css&quot;);
+@import url(&quot;apps/unity.css&quot;);
+@import url(&quot;apps/baobab.css&quot;);
+@import url(&quot;apps/gedit.css&quot;);
+@import url(&quot;apps/nautilus.css&quot;);
+@import url(&quot;apps/gnome-panel.css&quot;);
+@import url(&quot;apps/gnome-terminal.css&quot;);
+@import url(&quot;apps/gnome-system-log.css&quot;);
+@import url(&quot;apps/unity-greeter.css&quot;);
+@import url(&quot;apps/glade.css&quot;);
+@import url(&quot;apps/california.css&quot;);
+@import url(&quot;apps/software-center.css&quot;);
+@import url(&quot;public-colors.css&quot;);
+</code></pre>
+
+<p><br/></p>
+<p>The "<strong>metacity-1</strong>" folder contains images that the Metacity window-manager uses for buttons (such as the "close window" button). This directory also contains a file named "metacity-theme-1.xml" that contain's the theme's metadata (like the developer's name) and styling. However, the Metacity portion of the theme uses XML rather than CSS.</p>
+<p>The "<strong>unity</strong>" directory contains SVG files that Unity uses for buttons. Besides the SVG files, there are no other files in this folder.</p>
+<p>Some themes may contain other directories. For instance, "Clearlooks-Phenix" has a folder named "<strong>openbox-3</strong>" and "<strong>xfwm4</strong>". The "openbox-3" folder only contains a "themerc" file that declares the settings and appearance (a sample is seen below). The "xfwm4" directory contains <em>.xpm files, </em>.png images (in the "png" folder), a "README" file, and a "themerc" file which contains settings (as seen below).</p>
+<pre><code class="sh">/usr/share/themes/Clearlooks-Phenix/xfwm4/themerc
+</code></pre>
+
+<p>code :</p>
+<pre><code class="md"># Clearlooks XFWM4 by Casey Kirsle
+
+show_app_icon=true
+active_text_color=#FFFFFF
+inactive_text_color=#939393
+title_shadow_active=frame
+title_shadow_inactive=false
+button_layout=O|HMC
+button_offset=2
+button_spacing=2
+full_width_title=true
+maximized_offset=0
+title_vertical_offset_active=1
+title_vertical_offset_inactive=1
+</code></pre>
+
+<p>/usr/share/themes/Clearlooks-Phenix/openbox-3/themerc</p>
+<pre><code class="css">!# Clearlooks-Evolving
+!# Clearlooks as it evolves in gnome-git...
+!# Last updated 09/03/10
+
+# Fonts
+# these are really halos, but who cares?
+
+*.font: shadow=n
+window.active.label.text.font:shadow=y:shadowtint=30:shadowoffset=1
+window.inactive.label.text.font:shadow=y:shadowtint=00:shadowoffset=0
+menu.items.font:shadow=y:shadowtint=0:shadowoffset=1
+
+!# general stuff
+
+border.width: 1
+padding.width: 3
+padding.height: 2
+window.handle.width: 3
+window.client.padding.width: 0
+menu.overlap: 2
+*.justify: center
+
+!# lets set our damn shadows here, eh?
+
+*.bg.highlight: 50
+*.bg.shadow:  05
+
+window.active.title.bg.highlight: 35
+window.active.title.bg.shadow:  05
+
+window.inactive.title.bg.highlight: 30
+window.inactive.title.bg.shadow:  05
+
+window.*.grip.bg.highlight: 50
+window.*.grip.bg.shadow:  30
+
+window.*.handle.bg.highlight: 50
+window.*.handle.bg.shadow:  30
+
+!# Menu settings
+
+menu.border.color: #aaaaaa
+menu.border.width: 1
+
+menu.title.bg: solid flat
+menu.title.bg.color: #E6E7E6
+menu.title.text.color: #111111
+
+menu.items.bg: Flat Solid
+menu.items.bg.color: #ffffff
+menu.items.text.color: #111111
+menu.items.disabled.text.color: #aaaaaa
+
+menu.items.active.bg: Flat Gradient splitvertical border
+
+menu.items.active.bg.color: #97b8e2
+menu.items.active.bg.color.splitTo: #a8c5e9
+
+menu.items.active.bg.colorTo: #91b3de
+menu.items.active.bg.colorTo.splitTo: #80a7d6
+menu.items.active.bg.border.color: #4b6e99
+menu.items.active.text.color: #ffffff
+
+menu.separator.width: 1
+menu.separator.padding.width: 0
+menu.separator.padding.height: 3
+menu.separator.color: #aaaaaa
+
+!# set handles here and only the once?
+
+window.*.handle.bg: Raised solid
+window.*.handle.bg.color: #eaebec
+
+window.*.grip.bg: Raised solid
+window.*.grip.bg.color: #eaebec
+
+!# Active
+
+window.*.border.color: #585a5d
+
+window.active.title.separator.color: #4e76a8
+
+*.title.bg: Raised Gradient splitvertical
+*.title.bg.color: #8CB0DC
+*.title.bg.color.splitTo: #99BAE3
+*.title.bg.colorTo: #86ABD9
+*.title.bg.colorTo.splitTo: #7AA1D1
+
+window.active.label.bg: Parentrelative
+window.active.label.text.color: #ffffff
+
+window.active.button.*.bg: Flat Gradient splitvertical Border
+
+window.active.button.*.bg.color: #92B4DF
+window.active.button.*.bg.color.splitTo: #B0CAEB
+window.active.button.*.bg.colorTo: #86ABD9
+window.active.button.*.bg.colorTo.splitTo: #769FD0
+
+window.active.button.*.bg.border.color: #49678B
+window.active.button.*.image.color: #F4F5F6
+
+window.active.button.hover.bg.color: #b5d3ef
+window.active.button.hover.bg.color.splitTo: #b5d3ef
+window.active.button.hover.bg.colorTo: #9cbae7
+window.active.button.hover.bg.colorTo.splitTo: #8caede
+window.active.button.hover.bg.border.color: #4A658C
+window.active.button.hover.image.color: #ffffff
+
+window.active.button.pressed.bg: Flat solid Border
+window.active.button.pressed.bg.color: #7aa1d2
+
+window.active.button.hover.bg.border.color: #4A658C
+
+!# inactive
+
+!#window.inactive.border.color: #7e8285
+window.inactive.title.separator.color: #96999d
+
+window.inactive.title.bg: Raised Gradient splitvertical
+window.inactive.title.bg.color: #E3E2E0
+window.inactive.title.bg.color.splitTo: #EBEAE9
+window.inactive.title.bg.colorTo: #DEDCDA
+window.inactive.title.bg.colorTo.splitTo: #D5D3D1
+
+window.inactive.label.bg: Parentrelative
+window.inactive.label.text.color: #70747d
+
+window.inactive.button.*.bg: Flat Gradient splitVertical Border
+window.inactive.button.*.bg.color: #ffffff
+window.inactive.button.*.bg.color.splitto: #ffffff
+window.inactive.button.*.bg.colorTo: #F9F8F8
+window.inactive.button.*.bg.colorTo.splitto: #E9E7E6
+window.inactive.button.*.bg.border.color: #928F8B
+window.inactive.button.*.image.color: #6D6C6C
+
+
+!# osd (pop ups and what not, dock?)
+
+osd.border.width: 1
+osd.border.color:  #aaaaaa
+
+osd.bg: flat border gradient splitvertical
+osd.bg.color: #F0EFEE
+osd.bg.color.splitto: #f5f5f4
+osd.bg.colorTo: #EAEBEC
+osd.bg.colorTo.splitto: #E7E5E4
+
+osd.bg.border.color: #ffffff
+
+osd.active.label.bg: parentrelative
+osd.active.label.bg.color: #efefef
+osd.active.label.bg.border.color: #9c9e9c
+osd.active.label.text.color: #444
+
+osd.inactive.label.bg: parentrelative
+osd.inactive.label.text.color: #70747d
+
+!# yeah whatever, this is fine anyhoo?
+osd.hilight.bg: flat vertical gradient
+osd.hilight.bg.color: #9ebde5
+osd.hilight.bg.colorTo: #749dcf
+osd.unhilight.bg: flat vertical gradient
+osd.unhilight.bg.color: #BABDB6
+osd.unhilight.bg.colorTo: #efefef
+</code></pre>
+
+<p><br /></p>
+<h2 id="testing-themes">Testing Themes</h2>
+<p>When creating themes, it may be helpful to test it and tweak the code to get the desired appearance. Such developers may want to use some type of "theme-previewer". Thankfully, some exist.</p>
+<ul>
+<li>GTK+ Change Theme - This program can change the GTK theme and allow
+   developers to preview the theme. The program is composed of one
+   window that contains many widgets, thus providing a complete preview
+   for the theme. To install this program, type "apt-get install
+   gtk-chtheme".</li>
+<li>GTK Theme Switch - This program allows users to easily change the
+   user's theme. Be sure to have some applications open to view and test
+   the theme. To install this program, type "apt-get install
+   gtk-theme-switch" and type "gtk-theme-switch2" in a terminal to run
+   it.</li>
+<li>LXappearance - This program can change themes, icons, and fonts. PyWF</li>
+<li>This is a Python-based alternative to "The Widget Factory". PyWF can be obtained at
+   http://gtk-apps.org/content/show.php/PyTWF?content=102024</li>
+<li>The Widget Factory - This is an old GTK-previewer. To install this program, type
+   "apt-get install thewidgetfactory" and type "twf" in a terminal to
+   run it.</li>
+</ul>
+<p><br /><br /></p>
+<h2 id="theme-downloads">Theme Downloads</h2>
+<ul>
+<li>Cinnamon - http://gnome-look.org/index.php?xcontentmode=104</li>
+<li>Compiz - http://gnome-look.org/index.php?xcontentmode=102</li>
+<li>GNOME Shell - http://gnome-look.org/index.php?xcontentmode=191</li>
+<li>GTK2 - http://gnome-look.org/index.php?xcontentmode=100</li>
+<li>GTK3 - http://gnome-look.org/index.php?xcontentmode=167</li>
+<li>KDE/Qt -
+   http://kde-look.org/index.php?xcontentmode=8x9x10x11x12x13x14x15x16</li>
+<li>Linux Mint Themes -
+   http://linuxmint-art.org/index.php?xcontentmode=9x14x100</li>
+<li>Metacity - http://gnome-look.org/index.php?xcontentmode=101</li>
+<li>Ubuntu Themes - http://www.ubuntuthemes.org/</li>
+</ul>
+<p><br /></p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li>Graphical User Interface (GUI) Reading Guide -
+   http://www.linux.org/threads/gui-reading-guide.6471/</li>
+<li>GTK - http://www.linux.org/threads/understanding-gtk.6291/</li>
+<li>Introduction to Glade -
+   http://www.linux.org/threads/introduction-to-glade.7142/</li>
+<li>Desktop Environment vs Window Managers -
+   http://www.linux.org/threads/desktop-environment-vs-window-managers.7802/</li>
+<li>Official GTK+ 3 Reference Manual -
+   https://developer.gnome.org/gtk3/stable/</li>
+<li>GtkCssProvider -
+   https://developer.gnome.org/gtk3/stable/GtkCssProvider.html</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../getting-started/" title="Getting Started" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Getting Started
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../creating-icon-theme/" title="Creating icon theme" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Creating icon theme
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.8eb9be28.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:".."}})</script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-92801593-1","https://surajmandalcell.github.io/Gtk-Theming-Guide/"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>

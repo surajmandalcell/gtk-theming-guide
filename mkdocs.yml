@@ -1,0 +1,16 @@
+docs_dir: 'data'
+site_dir: 'docs'
+site_name: Gtk Theming Guide
+site_author: surajmandalcell
+site_url: https://surajmandalcell.github.io/Gtk-Theming-Guide/
+repo_url: https://github.com/surajmandalcell/Gtk-Theming-Guide
+google_analytics: ['UA-92801593-1', 'https://surajmandalcell.github.io/Gtk-Theming-Guide/']
+
+theme:
+  name: 'material'
+
+pages:
+    - Overview: index.md
+    - Getting Started: getting-started/index.md
+    - Creating gtk3 themes: creating-gtk3-themes/index.md
+    - Creating icon theme: creating-icon-theme/index.md
