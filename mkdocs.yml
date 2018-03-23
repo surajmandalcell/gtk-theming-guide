@@ -2,6 +2,7 @@ docs_dir: 'data'
 site_dir: 'docs'
 site_name: Gtk Theming Guide
 site_author: surajmandalcell
+copyright: 'Copyright &copy; 2017 - 2018 Suraj Mandal'
 site_url: https://surajmandalcell.github.io/Gtk-Theming-Guide/
 repo_url: https://github.com/surajmandalcell/Gtk-Theming-Guide
 google_analytics: ['UA-92801593-1', 'https://surajmandalcell.github.io/Gtk-Theming-Guide/']
@@ -14,3 +15,14 @@ pages:
     - Getting Started: getting-started/index.md
     - Creating gtk3 themes: creating-gtk3-themes/index.md
     - Creating icon theme: creating-icon-theme/index.md
+
+extra:
+  social:
+    - type: globe
+      link: http://surajmandalcell.github.io
+    - type: github-alt
+      link: https://github.com/surajmandalcell
+    - type: twitter
+      link: https://twitter.com/Cruelplatypus67
+    - type: linkedin
+      link: https://linkedin.com/in/surajmandalcell
