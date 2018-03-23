@@ -1,9 +1,3 @@
----
-date: 2016-03-09T00:11:02+01:00
-title: Creating GTK3 Themes
-weight: 20
----
-
 ## Creating GTK3 Themes
 
 To create a GTK3 theme, developers can start with an empty file or they can use a pre-existing theme as a template. It may help beginners to start with a pre-existing theme. For instance, a theme can be copied to the user's home folder and then the developer can start editing the files.

@@ -1,9 +1,3 @@
----
-date: 2017-03-09T00:11:02+01:00
-title: Creating Icon Theme
-weight: 30
----
-
 ## Creating Icon Theme
 
 Not only can Linux users customize the desktop theme, but they can also change the icons. Icon-theme packs are easy to make, install, and obtain. Many Linux users may find it helpful to learn how to change icons, edit them, get more, etc.
