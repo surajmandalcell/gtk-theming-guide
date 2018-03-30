@@ -9,4 +9,4 @@
 * Creating icon themes included
 
 [GitHub](https://github.com/surajmandalcell/Gtk-Theming-Guide)
-[Get Started](#gtk-theming-guide)
+[Get Started](#basic-concepts)
