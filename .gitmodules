@@ -1,6 +1,0 @@
-[submodule "themes"]
-	path = themes
-	url = https://github.com/digitalcraftsman/hugo-material-docs.git
-[submodule "themes/hugo-material-docs"]
-	path = themes/hugo-material-docs
-	url = https://github.com/digitalcraftsman/hugo-material-docs.git
