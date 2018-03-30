@@ -150,17 +150,3 @@ Cursors are also found in "~/.icons" and "/usr/share/icons". Cursor-themes use a
 These files are "X11 cursor images" and they have the "image/x-xcursor" mimetype. This type of image file contains multiple images. Each contained image is 48, 32, and 24 pixels in height and width; the images support the alpha-layer (transparency/RGBa). Gimp supports X11 cursor images and represents the contained sub-images as different layers. Each layer must be named using the format "(SIZEpx)_1 (50ms) (replace)", where "SIZE" is the width/height in pixels.
 
 All cursors that are drawn in these images must be in the center of the space (whether the space be 48x48 pixels or some other size).
-
-## Further Reading
-
-Graphical User Interface (GUI) Reading Guide - http://www.linux.org/threads/gui-reading-guide.6471/
-
-Icon Theme Specification - http://www.freedesktop.org/wiki/Specifications/icon-theme-spec/
-
-Icon Naming Specification - http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html
-
-Icon Theme Specification (single page) - http://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html
-
-Tango Icon Library - http://tango.freedesktop.org/Tango_Icon_Library
-
-Tango Icon Theme Guidelines - http://tango.freedesktop.org/Generic_Icon_Theme_Guidelines
