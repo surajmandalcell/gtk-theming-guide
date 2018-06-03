@@ -1,8 +1,0 @@
-docsify quickies
-
-  >Sidebar
-
-	# Heading {docsify-ignore-all}			//ignores all headings underneath
-	# heading {docsify-ignore}				//ignores this heading from sidebar
-	# loadSidebar: true, subMaxLevel: 2		/initialize sidebar.md and set subheading as links in sidebar
-	# 
