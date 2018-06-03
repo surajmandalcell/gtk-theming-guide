@@ -495,15 +495,15 @@ The full syntax for selectors understood by GTK+ can be found in the table below
 
 | Pattern  | Matches | Reference  | Notes |
 |---|---|---|---|
-|*  | any node |  CSS |  
-| E  |   any node with name E  |  CSS    
-| E.class  |   any E node with the given style class  | CSS    
-| E#id  |   any E node with the given ID  CSS   GTK+ uses the widget name as ID
-| E:nth-child({nth-child})  | any E node which is the n-th child of its parent node   | CSS    
-| E:nth-last-child({nth-child})  |  any E node which is the n-th child of its parent | node, counting from the end  | CSS    
-| E:first-child  |   any E node which is the first child of its parent node  | CSS    
-| E:last-child  | any E node which is the last child of its parent node  |  CSS    
-| E:only-child  | any E node which is the only child of its parent node   | CSS   | Equivalent to E:first-child:last-child
+|*  | any node |  CSS |  |
+| E  |   any node with name E  |  CSS    | |
+| E.class  |   any E node with the given style class  | CSS    | |
+| E#id  |   any E node with the given ID  | CSS |  GTK+ uses the widget name as ID |
+| E:nth-child({nth-child})  | any E node which is the n-th child of its parent node   | CSS | |
+| E:nth-last-child({nth-child})  |  any E node which is the n-th child of its parent | node, counting from the end  | CSS | |
+| E:first-child  |   any E node which is the first child of its parent node  | CSS | |   
+| E:last-child  | any E node which is the last child of its parent node  |  CSS | |   
+| E:only-child  | any E node which is the only child of its parent node   | CSS   | Equivalent to |E:first-child:last-child
 | E:link, E:visited  |  any E node which represents a hyperlink, not yet visited (:link) or already visited (:visited) | CSS  | Corresponds to GTK_STATE_FLAG_LINK and GTK_STATE_FLAGS_VISITED
 | E:active, E:hover, E:focus  |  any E node which is part of a widget with the corresponding state  |  CSS  | Corresponds to GTK_STATE_FLAG_ACTIVE, GTK_STATE_FLAG_PRELIGHT and GTK_STATE_FLAGS_FOCUSED; GTK+ also allows E:prelight and | E:focused
 | E:disabled  |   any E node which is part of a widget which is disabled  | CSS  | Corresponds to GTK_STATE_FLAG_INSENSITIVE; GTK+ also allows E:insensitive
