@@ -330,6 +330,33 @@ osd.unhilight.bg.colorTo: #efefef
 
 <br />
 
+## Selectors
+
+| Pattern  | Matches | Reference  | Notes |
+|---|---|---|---|
+|* |  any node |  CSS |  
+| E   any node with name E    CSS    
+| E.class   any E node with the given style class  CSS    
+| E#id   any E node with the given ID  CSS   GTK+ uses the widget name as ID
+| E:nth-child(〈nth-child〉)    any E node which is the n-th child of its parent node    CSS    
+| E:nth-last-child(〈nth-child〉)  any E node which is the n-th child of its parent | node, counting from the end   CSS    
+| E:first-child   any E node which is the first child of its parent node   CSS    
+| E:last-child    any E node which is the last child of its parent node    CSS    
+| E:only-child    any E node which is the only child of its parent node    CSS   | Equivalent to E:first-child:last-child
+| E:link, E:visited  any E node which represents a hyperlink, not yet visited (:link) or already visited (:visited)  CSS   Corresponds to GTK_STATE_FLAG_LINK and GTK_STATE_FLAGS_VISITED
+| E:active, E:hover, E:focus  any E node which is part of a widget with the corresponding state    CSS   Corresponds to GTK_STATE_FLAG_ACTIVE, GTK_STATE_FLAG_PRELIGHT and GTK_STATE_FLAGS_FOCUSED; GTK+ also allows E:prelight and | E:focused
+| E:disabled   any E node which is part of a widget which is disabled   CSS   Corresponds to GTK_STATE_FLAG_INSENSITIVE; GTK+ also allows E:insensitive
+| E:checked    any E node which is part of a widget (e.g. radio- or checkbuttons) which is checked    CSS   Corresponds to GTK_STATE_FLAG_CHECKED
+| E:indeterminate    any E node which is part of a widget (e.g. radio- or checkbuttons) which is in an indeterminate state    CSS3, CSS4  Corresponds to GTK_STATE_FLAG_INCONSISTENT; GTK+ also allows E:inconsistent
+| E:backdrop, E:selected   any E node which is part of a widget with the corresponding state       Corresponds to GTK_STATE_FLAG_BACKDROP, GTK_STATE_FLAG_SELECTED
+| E:not(〈selector〉)  any E node which does not match the simple selector 〈selector〉    CSS    
+| E:dir(ltr), E:dir(rtl)   any E node that has the corresponding text direction  CSS4   
+| E:drop(active)  any E node that is an active drop target for a current DND operation    CSS4   
+| E F    any F node which is a descendent of an E node   CSS    
+| E > F  any F node which is a child of an E node  CSS    
+| E ~ F  any F node which is preceded by an E node    CSS    
+| E + F  any F node which is immediately preceded by an E node    CSS    
+
 
 
 
@@ -373,7 +400,8 @@ When creating themes, it may be helpful to test it and tweak the code to get the
 <br />
 
 ## Further Reading
-
+   
+ - Gtk+ CSS Overview - https://developer.gnome.org/gtk3/stable/chap-css-overview.html
  - Graphical User Interface (GUI) Reading Guide -
    http://www.linux.org/threads/gui-reading-guide.6471/
  - GTK - http://www.linux.org/threads/understanding-gtk.6291/
