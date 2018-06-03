@@ -2,9 +2,11 @@
 
 [![Code Triagers Badge](https://www.codetriage.com/surajmandalcell/gtk-theming-guide/badges/users.svg)](https://www.codetriage.com/surajmandalcell/gtk-theming-guide)
 
-This documentation includes all the help you need to kick start a gtk theme from scratch or modify a pre-existing gtk theme to make it better
+Novice guide towards making your own first gtk theme!
 
-Go here https://surajmandalcell.github.io/Gtk-Theming-Guide/ to view documentation
+Visit here https://surajmandalcell.github.io/Gtk-Theming-Guide/ to see full documentation
 
 ![](_media/thumbnail.png)
-For full list of credits see [credits.md](credits.md) in the repo
+Also see
+ - [CREDITS](CREDITS.md)
+ - [LICENSE - GNU GPL V3](LICENSE.md)
