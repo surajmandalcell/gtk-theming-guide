@@ -516,7 +516,7 @@ The full syntax for selectors understood by GTK+ can be found in the table below
 | E F  | any F node which is a descendent of an E node  | CSS    | |
 | E > F  |  any F node which is a child of an E node | CSS    | |
 | E ~ F  |  any F node which is preceded by an E node  |  CSS  | |
-| E + F  |  any F node which is immediately preceded by an E node  |  CSS   |
+| E + F  |  any F node which is immediately preceded by an E node  |  CSS   | |
 
 To learn more about selectors in CSS, read the Selectors [module](https://www.w3.org/TR/css3-selectors/) of the CSS specification.
 
