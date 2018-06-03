@@ -3,4 +3,4 @@
 * [Creating Icon theme](creating_icon_theme.md)
 
 * [Further reading](further_reading.md)
-* [Credits](credits.md)
+* [Credits](CREDITS.md)
