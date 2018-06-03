@@ -2,7 +2,7 @@
 
 # GTK THEMING GUIDE
 
-> A documentation for theming gtk.
+> A novice guide to making gtk theme!
 
 * Introduction to basics
 * Simple and Well formated
@@ -10,3 +10,5 @@
 
 [GitHub](https://github.com/surajmandalcell/Gtk-Theming-Guide)
 [Get Started](#basic-concepts)
+
+<!-- ![color](#f1f1f1) -->

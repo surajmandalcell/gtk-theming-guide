@@ -2,7 +2,7 @@
 
 [![Code Triagers Badge](https://www.codetriage.com/surajmandalcell/gtk-theming-guide/badges/users.svg)](https://www.codetriage.com/surajmandalcell/gtk-theming-guide)
 
-Novice guide towards making your own first gtk theme!
+A novice guide to making gtk theme!
 
 Visit here https://gtkthemingguide.now.sh to see full documentation
 
