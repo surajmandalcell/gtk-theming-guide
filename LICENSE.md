@@ -1,6 +1,3 @@
-The content of this documentation by Suraj Mandal
----
-
                       GNU GENERAL PUBLIC LICENSE
                        Version 3, 2018 Suraj Mandal
 
