@@ -4,7 +4,7 @@ To create a GTK3 theme, developers can start with an empty file or they can use 
 
 The general format for a GTK3 theme is to create a folder named after the theme. Then, create a sub-directory called "gtk-3.0" and create a file inside of it named "gtk.css". In the "gtk.css" file, use CSS code to control how the theme will look. Move the theme to ~/.themes for testing purposes. Use the newly created theme and make changes as necessary. If desired, developers can add additional components to the theme for GTK2, Openbox, Metacity, Unity, etc.
 
-To explain how to create themes, we will study the "Ambiance" theme, which is usually found at /usr/share/themes/Ambiance. This directory contains the below listed sub-directories and a file named "index.theme".
+### To explain how to create themes, we will study the "Ambiance" theme, which is usually found at /usr/share/themes/Ambiance. This directory contains the below listed sub-directories and a file named "index.theme".
 
 - gtk-2.0
 - gtk-3.0
@@ -29,25 +29,6 @@ IconTheme=ubuntu-mono-dark
 CursorTheme=DMZ-White
 ButtonLayout=close,minimize,maximize:
 X-Ubuntu-UseOverlayScrollbars=true
-```
-
-<br />
-
-The "**gtk-2.0**" directory contains files for GTK2 such as a "gtkrc" file and an "apps" directory that contains application-specific GTK settings. The "gtkrc" file is the main CSS-file for the GTK2 portion of the theme. Below are the contents of /usr/share/themes/Ambiance/gtk-2.0/apps/nautilus.rc
-
-code :
-```css
-# ==============================================================================
-# NAUTILUS SPECIFIC SETTINGS
-# ==============================================================================
-
-style "nautilus_info_pane" {
-   bg[NORMAL] = @bg_color
-}
-
-widget_class "*Nautilus*<GtkNotebook>*<GtkEventBox>" style "nautilus_info_pane"
-widget_class "*Nautilus*<GtkButton>" style "notebook_button"
-widget_class "*Nautilus*<GtkButton>*<GtkLabel>" style "notebook_button"
 ```
 
 <br />
@@ -128,13 +109,30 @@ code :
 @import url("public-colors.css");
 ```
 
-<br/>
+<br>
+
+The "**gtk-2.0**" directory contains files for GTK2 such as a "gtkrc" file and an "apps" directory that contains application-specific GTK settings. The "gtkrc" file is the main CSS-file for the GTK2 portion of the theme. Below are the contents of /usr/share/themes/Ambiance/gtk-2.0/apps/nautilus.rc
+
+code :
+```css
+# ==============================================================================
+# NAUTILUS SPECIFIC SETTINGS
+# ==============================================================================
+
+style "nautilus_info_pane" {
+   bg[NORMAL] = @bg_color
+}
+
+widget_class "*Nautilus*<GtkNotebook>*<GtkEventBox>" style "nautilus_info_pane"
+widget_class "*Nautilus*<GtkButton>" style "notebook_button"
+widget_class "*Nautilus*<GtkButton>*<GtkLabel>" style "notebook_button"
+```
+
+<br>
 
 The "**metacity-1**" folder contains images that the Metacity window-manager uses for buttons (such as the "close window" button). This directory also contains a file named "metacity-theme-1.xml" that contain's the theme's metadata (like the developer's name) and styling. However, the Metacity portion of the theme uses XML rather than CSS.
 
-The "**unity**" directory contains SVG files that Unity uses for buttons. Besides the SVG files, there are no other files in this folder.
-
-Some themes may contain other directories. For instance, "Clearlooks-Phenix" has a folder named "**openbox-3**" and "**xfwm4**". The "openbox-3" folder only contains a "themerc" file that declares the settings and appearance (a sample is seen below). The "xfwm4" directory contains *.xpm files, *.png images (in the "png" folder), a "README" file, and a "themerc" file which contains settings (as seen below).
+Some themes may contain other directories. For instance, "**xfwm4**". The "xfwm4" directory contains `*`.xpm files, `*`.png images (in the "png" folder), a "README" file, and a "themerc" file which contains settings (as seen below).
 
 ```sh
 /usr/share/themes/Clearlooks-Phenix/xfwm4/themerc
@@ -158,177 +156,24 @@ title_vertical_offset_active=1
 title_vertical_offset_inactive=1
 ```
 
+<br />
 
-/usr/share/themes/Clearlooks-Phenix/openbox-3/themerc
+## Importing style sheets
+
+GTK+ supports the CSS @import rule, in order to load another style sheet in addition to the currently parsed one.
+
+The syntax for @import rules is as follows:
+
+〈import rule〉 = @import [ 〈url〉 | 〈string〉 ]
+〈url〉 = url( 〈string〉 )
+
+> An example for using the @import rule
 
 ```css
-!# Clearlooks-Evolving
-!# Clearlooks as it evolves in gnome-git...
-!# Last updated 09/03/10
-
-# Fonts
-# these are really halos, but who cares?
-
-*.font: shadow=n
-window.active.label.text.font:shadow=y:shadowtint=30:shadowoffset=1
-window.inactive.label.text.font:shadow=y:shadowtint=00:shadowoffset=0
-menu.items.font:shadow=y:shadowtint=0:shadowoffset=1
-
-!# general stuff
-
-border.width: 1
-padding.width: 3
-padding.height: 2
-window.handle.width: 3
-window.client.padding.width: 0
-menu.overlap: 2
-*.justify: center
-
-!# lets set our damn shadows here, eh?
-
-*.bg.highlight: 50
-*.bg.shadow:  05
-
-window.active.title.bg.highlight: 35
-window.active.title.bg.shadow:  05
-
-window.inactive.title.bg.highlight: 30
-window.inactive.title.bg.shadow:  05
-
-window.*.grip.bg.highlight: 50
-window.*.grip.bg.shadow:  30
-
-window.*.handle.bg.highlight: 50
-window.*.handle.bg.shadow:  30
-
-!# Menu settings
-
-menu.border.color: #aaaaaa
-menu.border.width: 1
-
-menu.title.bg: solid flat
-menu.title.bg.color: #E6E7E6
-menu.title.text.color: #111111
-
-menu.items.bg: Flat Solid
-menu.items.bg.color: #ffffff
-menu.items.text.color: #111111
-menu.items.disabled.text.color: #aaaaaa
-
-menu.items.active.bg: Flat Gradient splitvertical border
-
-menu.items.active.bg.color: #97b8e2
-menu.items.active.bg.color.splitTo: #a8c5e9
-
-menu.items.active.bg.colorTo: #91b3de
-menu.items.active.bg.colorTo.splitTo: #80a7d6
-menu.items.active.bg.border.color: #4b6e99
-menu.items.active.text.color: #ffffff
-
-menu.separator.width: 1
-menu.separator.padding.width: 0
-menu.separator.padding.height: 3
-menu.separator.color: #aaaaaa
-
-!# set handles here and only the once?
-
-window.*.handle.bg: Raised solid
-window.*.handle.bg.color: #eaebec
-
-window.*.grip.bg: Raised solid
-window.*.grip.bg.color: #eaebec
-
-!# Active
-
-window.*.border.color: #585a5d
-
-window.active.title.separator.color: #4e76a8
-
-*.title.bg: Raised Gradient splitvertical
-*.title.bg.color: #8CB0DC
-*.title.bg.color.splitTo: #99BAE3
-*.title.bg.colorTo: #86ABD9
-*.title.bg.colorTo.splitTo: #7AA1D1
-
-window.active.label.bg: Parentrelative
-window.active.label.text.color: #ffffff
-
-window.active.button.*.bg: Flat Gradient splitvertical Border
-
-window.active.button.*.bg.color: #92B4DF
-window.active.button.*.bg.color.splitTo: #B0CAEB
-window.active.button.*.bg.colorTo: #86ABD9
-window.active.button.*.bg.colorTo.splitTo: #769FD0
-
-window.active.button.*.bg.border.color: #49678B
-window.active.button.*.image.color: #F4F5F6
-
-window.active.button.hover.bg.color: #b5d3ef
-window.active.button.hover.bg.color.splitTo: #b5d3ef
-window.active.button.hover.bg.colorTo: #9cbae7
-window.active.button.hover.bg.colorTo.splitTo: #8caede
-window.active.button.hover.bg.border.color: #4A658C
-window.active.button.hover.image.color: #ffffff
-
-window.active.button.pressed.bg: Flat solid Border
-window.active.button.pressed.bg.color: #7aa1d2
-
-window.active.button.hover.bg.border.color: #4A658C
-
-!# inactive
-
-!#window.inactive.border.color: #7e8285
-window.inactive.title.separator.color: #96999d
-
-window.inactive.title.bg: Raised Gradient splitvertical
-window.inactive.title.bg.color: #E3E2E0
-window.inactive.title.bg.color.splitTo: #EBEAE9
-window.inactive.title.bg.colorTo: #DEDCDA
-window.inactive.title.bg.colorTo.splitTo: #D5D3D1
-
-window.inactive.label.bg: Parentrelative
-window.inactive.label.text.color: #70747d
-
-window.inactive.button.*.bg: Flat Gradient splitVertical Border
-window.inactive.button.*.bg.color: #ffffff
-window.inactive.button.*.bg.color.splitto: #ffffff
-window.inactive.button.*.bg.colorTo: #F9F8F8
-window.inactive.button.*.bg.colorTo.splitto: #E9E7E6
-window.inactive.button.*.bg.border.color: #928F8B
-window.inactive.button.*.image.color: #6D6C6C
-
-
-!# osd (pop ups and what not, dock?)
-
-osd.border.width: 1
-osd.border.color:  #aaaaaa
-
-osd.bg: flat border gradient splitvertical
-osd.bg.color: #F0EFEE
-osd.bg.color.splitto: #f5f5f4
-osd.bg.colorTo: #EAEBEC
-osd.bg.colorTo.splitto: #E7E5E4
-
-osd.bg.border.color: #ffffff
-
-osd.active.label.bg: parentrelative
-osd.active.label.bg.color: #efefef
-osd.active.label.bg.border.color: #9c9e9c
-osd.active.label.text.color: #444
-
-osd.inactive.label.bg: parentrelative
-osd.inactive.label.text.color: #70747d
-
-!# yeah whatever, this is fine anyhoo?
-osd.hilight.bg: flat vertical gradient
-osd.hilight.bg.color: #9ebde5
-osd.hilight.bg.colorTo: #749dcf
-osd.unhilight.bg: flat vertical gradient
-osd.unhilight.bg.color: #BABDB6
-osd.unhilight.bg.colorTo: #efefef
+   @import url("path/to/common.css");
 ```
 
-<br />
+
 
 ## Selectors
 
