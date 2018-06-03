@@ -6,6 +6,7 @@ Themes made for GTK will not work in Qt-based applications. A Qt-theme is needed
 
 The themes use Cascading Style-Sheets (CSS) to generate the theme's appearance. This is the same CSS that web-developers use on web-pages. However, instead of HTML tags being referenced, GTK widgets are specified. It is important that theme developers learn CSS.
 
+
 ## Theme Location
 
 ```sh
@@ -23,6 +24,7 @@ $datadir/share/themes/NAME/gtk-3.0/gtk.css (typically
 
 If there are two themes with the same name, then the one in the user's home folder (~/.themes) will be used. Developers can take advantage of GTK's theme-seeking algorithm by testing new themes in their local home's theme directory.
 
+
 ### Theme Engines
 
 A "Theme engine" is a piece of software that changes the look of the GUI's widgets. The engine reads and uses the theme's files to know how the various widgets should be drawn. Some engines come with themes of their own. Each engine has its advantages and disadvantages, and some engines add special properties and features.
@@ -35,3 +37,22 @@ Many theme-engines can be obtained from the default repositories. Debian-based L
 - gtk3-engines-unico - Unico GTK3 engine
 - gtk3-engines-xfce - GTK3 engine for Xfce
 
+
+## Tools Required/Helpful
+
+ 1. **GtkInspector** is a must have tool if you want to make gtk themes or style gtk apps. GtkInspector is the built-in interactive debugging support in GTK+. It was added in GTK+ 3.14, based on a copy of the well-estabished gtkparasite. This tool is integerated natively into gnome desktop environment but disabled by default. To use this you need to follow these steps :
+    ```sh
+    gsettings set org.gtk.Settings.Debug enable-inspector-keybinding true
+     ```
+     launch it by pressing on the keyboard Control-Shift-I or Control-Shift-D.
+    If you don't want to use the shortcuts, you can also run it temporarily directly when running your app with:
+    
+    ```sh
+    GTK_DEBUG=interactive your-app
+    ```
+    If you get `No such schema 'org.gtk.Settings.Debug'` then install the `libgtk-3-dev` dependency by using
+    ```sh
+    sudo apt-get install libgtk-3-dev
+    ```
+ 2. **Color picker** - You can use any color picker you want (gnome-color-picker, elementary color picker, etc.) as long as you have one its fine.
+ 3. **Good text editor** - You might want to consider using good text editor for syntax hilighting and auto-complete for faster css.

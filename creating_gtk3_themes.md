@@ -1,22 +1,3 @@
-## Tools Required/Helpful
-
- 1. **GtkInspector** is a must have tool if you want to make gtk themes or style gtk apps. GtkInspector is the built-in interactive debugging support in GTK+. It was added in GTK+ 3.14, based on a copy of the well-estabished gtkparasite. This tool is integerated natively into gnome desktop environment but disabled by default. To use this you need to follow these steps :
-    ```sh
-    gsettings set org.gtk.Settings.Debug enable-inspector-keybinding true
-     ```
-     launch it by pressing on the keyboard Control-Shift-I or Control-Shift-D.
-    If you don't want to use the shortcuts, you can also run it temporarily directly when running your app with:
-    
-    ```sh
-    GTK_DEBUG=interactive your-app
-    ```
-    If you get `No such schema 'org.gtk.Settings.Debug'` then install the `libgtk-3-dev` dependency by using
-    ```sh
-    sudo apt-get install libgtk-3-dev
-    ```
- 2. **Color picker** - You can use any color picker you want (gnome-color-picker, elementary color picker, etc.) as long as you have one its fine.
- 3. **Good text editor** - You might want to consider using good text editor for syntax hilighting and auto-complete for faster css.
-
 ## Study A Premade GTK3 Theme
 
 To create a GTK3 theme, developers can start with an empty file or they can use a pre-existing theme as a template. It may help beginners to start with a pre-existing theme. For instance, a theme can be copied to the user's home folder and then the developer can start editing the files.
