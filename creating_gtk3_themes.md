@@ -342,7 +342,7 @@ In more complicated situations, selectors can be combined in various ways. To re
 
 
 
-**Example . Theme labels that are descendants of a window**
+**Theme labels that are descendants of a window**
 
 ```css
 window label {
@@ -351,7 +351,7 @@ window label {
 ```
   
 
-**Example . Theme notebooks, and anything within**
+**Theme notebooks, and anything within**
 
 ```css
 notebook {
@@ -360,7 +360,7 @@ notebook {
 ```
   
 
-**Example . Theme combo boxes, and entries that are direct children of a notebook**
+**Theme combo boxes, and entries that are direct children of a notebook**
 
 ```css
 combobox,
@@ -371,7 +371,7 @@ notebook > entry {
 ```
   
 
-**Example . Theme any widget within a GtkBox**
+**Theme any widget within a GtkBox**
 
 ```css
 box *  {
@@ -380,7 +380,7 @@ box *  {
 ```
   
 
-**Example . Theme a label named title-label**
+**Theme a label named title-label**
 
 ```css
 label#title-label {
@@ -389,7 +389,7 @@ label#title-label {
 ```
   
 
-**Example . Theme any widget named main-entry**
+**Theme any widget named main-entry**
 
 ```css
 #main-entry {
@@ -398,7 +398,7 @@ label#title-label {
 ```
   
 
-**Example . Theme all widgets with the style class entry**
+**Theme all widgets with the style class entry**
 
 ```css
 .entry {
@@ -407,7 +407,7 @@ label#title-label {
 ```
   
 
-**Example . Theme the entry of a GtkSpinButton**
+**Theme the entry of a GtkSpinButton**
 
 ```css
 spinbutton entry {
@@ -418,7 +418,7 @@ spinbutton entry {
 
 It is possible to select CSS nodes depending on their position amongst their siblings by applying pseudo-classes to the selector, like :first-child, :last-child or :nth-child(even). When used in selectors, pseudo-classes must be prefixed with a : character.
 
-**Example . Theme labels in the first notebook tab**
+**Theme labels in the first notebook tab**
 
 ```css
 notebook tab:first-child label {
@@ -427,9 +427,9 @@ notebook tab:first-child label {
 ```
   
 
-> *Another use of pseudo-classes is to match widgets depending on their state. The available pseudo-classes for widget states are :active, :hover :disabled, :selected, :focus, :indeterminate, :checked and :backdrop. In addition, the following pseudo-classes don't have a direct equivalent as a widget state: :dir(ltr) and :dir(rtl) (for text direction), :link and :visited (for links) and :drop(active) (for highlighting drop targets). Widget state pseudo-classes may only apply to the last element in a selector.*  
+> Another use of pseudo-classes is to match widgets depending on their state. The available pseudo-classes for widget states are :active, :hover :disabled, :selected, :focus, :indeterminate, :checked and :backdrop. In addition, the following pseudo-classes don't have a direct equivalent as a widget state: :dir(ltr) and :dir(rtl) (for text direction), :link and :visited (for links) and :drop(active) (for highlighting drop targets). Widget state pseudo-classes may only apply to the last element in a selector. 
 
-**Example . Theme pressed buttons**
+**Theme pressed buttons**
 
 ```css
 button:active {
@@ -438,7 +438,7 @@ button:active {
 ```
   
 
-**Example . Theme buttons with the mouse pointer over it**
+**Theme buttons with the mouse pointer over it**
 
 ```css
 button:hover {
@@ -447,7 +447,7 @@ button:hover {
 ```
   
 
-**Example . Theme insensitive widgets**
+**Theme insensitive widgets**
 
 ```css
 *:disabled {
@@ -456,7 +456,7 @@ button:hover {
 ```
   
 
-**Example . Theme checkbuttons that are checked**
+**Theme checkbuttons that are checked**
 
 ```css
 checkbutton:checked {
@@ -465,7 +465,7 @@ checkbutton:checked {
 ```
   
 
-**Example . Theme focused labels**
+**Theme focused labels**
 
 ```css
 label:focus {
@@ -474,7 +474,7 @@ label:focus {
 ```
   
 
-**Example . Theme inconsistent checkbuttons**
+**Theme inconsistent checkbuttons**
 
 ```css
 checkbutton:indeterminate {
