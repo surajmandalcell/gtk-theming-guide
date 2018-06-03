@@ -332,14 +332,175 @@ osd.unhilight.bg.colorTo: #efefef
 
 ## Selectors
 
+Selectors work very similar to the way they do in CSS.  
+
+All widgets have one or more CSS nodes with element names and style classes. When style classes are used in selectors, they have to be prefixed with a period. Widget names can be used in selectors like IDs. When used in a selector, widget names must be prefixed with a # character.  
+
+In more complicated situations, selectors can be combined in various ways. To require that a node satisfies several conditions, combine several selectors into one by concatenating them. To only match a node when it occurs inside some other node, write the two selectors after each other, separated by whitespace. To restrict the match to direct children of the parent node, insert a > character between the two selectors.  
+
+### Examples
+
+
+
+**Example . Theme labels that are descendants of a window**
+
+```css
+window label {
+ background-color: #898989;
+}
+```
+  
+
+**Example . Theme notebooks, and anything within**
+
+```css
+notebook {
+ background-color: #a939f0;
+}
+```
+  
+
+**Example . Theme combo boxes, and entries that are direct children of a notebook**
+
+```css
+combobox,
+notebook > entry {
+ color: @fg_color;
+ background-color: #1209a2;
+}
+```
+  
+
+**Example . Theme any widget within a GtkBox**
+
+```css
+box *  {
+ font: 20px Sans;
+}
+```
+  
+
+**Example . Theme a label named title-label**
+
+```css
+label#title-label {
+ font: 15px Sans;
+}
+```
+  
+
+**Example . Theme any widget named main-entry**
+
+```css
+#main-entry {
+ background-color: #f0a810;
+}
+```
+  
+
+**Example . Theme all widgets with the style class entry**
+
+```css
+.entry {
+ color: #39f1f9;
+}
+```
+  
+
+**Example . Theme the entry of a GtkSpinButton**
+
+```css
+spinbutton entry {
+ color: #900185;
+}
+```
+  
+
+It is possible to select CSS nodes depending on their position amongst their siblings by applying pseudo-classes to the selector, like :first-child, :last-child or :nth-child(even). When used in selectors, pseudo-classes must be prefixed with a : character.
+
+**Example . Theme labels in the first notebook tab**
+
+```css
+notebook tab:first-child label {
+ color: #89d012;
+}
+```
+  
+
+> *Another use of pseudo-classes is to match widgets depending on their state. The available pseudo-classes for widget states are :active, :hover :disabled, :selected, :focus, :indeterminate, :checked and :backdrop. In addition, the following pseudo-classes don't have a direct equivalent as a widget state: :dir(ltr) and :dir(rtl) (for text direction), :link and :visited (for links) and :drop(active) (for highlighting drop targets). Widget state pseudo-classes may only apply to the last element in a selector.*  
+
+**Example . Theme pressed buttons**
+
+```css
+button:active {
+ background-color: #0274d9;
+}
+```
+  
+
+**Example . Theme buttons with the mouse pointer over it**
+
+```css
+button:hover {
+ background-color: #3085a9;
+}
+```
+  
+
+**Example . Theme insensitive widgets**
+
+```css
+*:disabled {
+ background-color: #320a91;
+}
+```
+  
+
+**Example . Theme checkbuttons that are checked**
+
+```css
+checkbutton:checked {
+ background-color: #56f9a0;
+}
+```
+  
+
+**Example . Theme focused labels**
+
+```css
+label:focus {
+ background-color: #b4940f;
+}
+```
+  
+
+**Example . Theme inconsistent checkbuttons**
+
+```css
+checkbutton:indeterminate {
+ background-color: #20395a;
+}
+```
+
+
+  
+
+To determine the effective style for a widget, all the matching rule sets are merged. As in CSS, rules apply by specificity, so the rules whose selectors more closely match a node will take precedence over the others.
+
+The full syntax for selectors understood by GTK+ can be found in the table below. The main difference to CSS is that GTK+ does not currently support attribute selectors.
+
+
+
+### A table of selectors used by gtk+ to style apps
+
 | Pattern  | Matches | Reference  | Notes |
 |---|---|---|---|
 |*  | any node |  CSS |  
 | E  |   any node with name E  |  CSS    
 | E.class  |   any E node with the given style class  | CSS    
 | E#id  |   any E node with the given ID  CSS   GTK+ uses the widget name as ID
-| E:nth-child(〈nth-child〉)  | any E node which is the n-th child of its parent node   | CSS    
-| E:nth-last-child(〈nth-child〉)  |  any E node which is the n-th child of its parent node, counting from the end  | CSS    
+| E:nth-child({nth-child})  | any E node which is the n-th child of its parent node   | CSS    
+| E:nth-last-child({nth-child})  |  any E node which is the n-th child of its parent | node, counting from the end  | CSS    
 | E:first-child  |   any E node which is the first child of its parent node  | CSS    
 | E:last-child  | any E node which is the last child of its parent node  |  CSS    
 | E:only-child  | any E node which is the only child of its parent node   | CSS   | Equivalent to E:first-child:last-child
@@ -349,7 +510,7 @@ osd.unhilight.bg.colorTo: #efefef
 | E:checked  | any E node which is part of a widget (e.g. radio- or checkbuttons) which is checked   | CSS  |  Corresponds to GTK_STATE_FLAG_CHECKED
 | E:indeterminate  | any E node which is part of a widget (e.g. radio- or checkbuttons) which is in an indeterminate state  |  CSS3, CSS4 |  Corresponds to GTK_STATE_FLAG_INCONSISTENT; GTK+ also allows E:inconsistent
 | E:backdrop, E:selected  |   any E node which is part of a widget with the corresponding state  |  -  | Corresponds to GTK_STATE_FLAG_BACKDROP, GTK_STATE_FLAG_SELECTED
-| E:not(〈selector〉)  |  any E node which does not match the simple selector 〈selector〉  |  CSS    |
+| E:not({selector})  |  any E node which does not match the simple selector {selector}  |  CSS    |
 | E:dir(ltr), E:dir(rtl)  |   any E node that has the corresponding text direction  | CSS4   | 
 | E:drop(active)  |  any E node that is an active drop target for a current DND operation  |  CSS4   |
 | E F  | any F node which is a descendent of an E node   CSS    |
@@ -357,9 +518,45 @@ osd.unhilight.bg.colorTo: #efefef
 | E ~ F  |  any F node which is preceded by an E node    CSS    |
 | E + F  |  any F node which is immediately preceded by an E node    CSS    |
 
+To learn more about selectors in CSS, read the Selectors [module](https://www.w3.org/TR/css3-selectors/) of the CSS specification.
 
 
+## Colors
 
+CSS allows to specify colors in various ways, using numeric values or names from a predefined list of colors. 
+
+**Specifying colors in various ways**  
+
+```css
+   color: transparent;
+   background-color: red;
+   border-top-color: rgb(128,57,0);
+   border-left-color: rgba(10%,20%,30%,0.5);
+   border-right-color: #ff00cc;
+   border-bottom-color: #ffff0000cccc;
+```
+
+**An example for defining colors**
+
+ GTK+ adds several additional ways to specify colors.
+
+{gtk color} = {symbolic color} | {color expression} | {win32 color}
+
+The first is a reference to a color defined via a @define-color rule. The syntax for @define-color rules is as follows:
+
+{define color rule} = @define-color {name} {color}
+
+To refer to the color defined by a @define-color rule, use the name from the rule, prefixed with @.
+
+{symbolic color} = @{name}
+
+```css
+@define-color bg_color #f9a039;
+
+* {
+  background-color: @bg_color;
+}
+```
 
 ## Testing Themes
 
