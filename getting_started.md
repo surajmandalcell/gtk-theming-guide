@@ -6,6 +6,25 @@ Themes made for GTK will not work in Qt-based applications. A Qt-theme is needed
 
 The themes use Cascading Style-Sheets (CSS) to generate the theme's appearance. This is the same CSS that web-developers use on web-pages. However, instead of HTML tags being referenced, GTK widgets are specified. It is important that theme developers learn CSS.
 
+## Tools Required/Helpful
+
+ 1. **GtkInspector** is a must have tool if you want to make gtk themes or style gtk apps. GtkInspector is the built-in interactive debugging support in GTK+. It was added in GTK+ 3.14, based on a copy of the well-estabished gtkparasite. This tool is integerated natively into gnome desktop environment but disabled by default. To use this you need to follow these steps :
+    ```sh
+    gsettings set org.gtk.Settings.Debug enable-inspector-keybinding true
+     ```
+     launch it by pressing on the keyboard Control-Shift-I or Control-Shift-D.
+    If you don't want to use the shortcuts, you can also run it temporarily directly when running your app with:
+    
+    ```sh
+    GTK_DEBUG=interactive your-app
+    ```
+    If you get `No such schema 'org.gtk.Settings.Debug'` then install the `libgtk-3-dev` dependency by using
+    ```sh
+    sudo apt-get install libgtk-3-dev
+    ```
+ 2. **Color picker** - You can use any color picker you want (gnome-color-picker, elementary color picker, etc.) as long as you have one its fine.
+ 3. **Good text editor** - You might want to consider using good text editor for syntax hilighting and auto-complete for faster css.
+
 
 ## Theme Location
 
@@ -36,23 +55,3 @@ Many theme-engines can be obtained from the default repositories. Debian-based L
 - gtk3-engines-oxygen - Engine port of the Oxygen widget style to GTK
 - gtk3-engines-unico - Unico GTK3 engine
 - gtk3-engines-xfce - GTK3 engine for Xfce
-
-
-## Tools Required/Helpful
-
- 1. **GtkInspector** is a must have tool if you want to make gtk themes or style gtk apps. GtkInspector is the built-in interactive debugging support in GTK+. It was added in GTK+ 3.14, based on a copy of the well-estabished gtkparasite. This tool is integerated natively into gnome desktop environment but disabled by default. To use this you need to follow these steps :
-    ```sh
-    gsettings set org.gtk.Settings.Debug enable-inspector-keybinding true
-     ```
-     launch it by pressing on the keyboard Control-Shift-I or Control-Shift-D.
-    If you don't want to use the shortcuts, you can also run it temporarily directly when running your app with:
-    
-    ```sh
-    GTK_DEBUG=interactive your-app
-    ```
-    If you get `No such schema 'org.gtk.Settings.Debug'` then install the `libgtk-3-dev` dependency by using
-    ```sh
-    sudo apt-get install libgtk-3-dev
-    ```
- 2. **Color picker** - You can use any color picker you want (gnome-color-picker, elementary color picker, etc.) as long as you have one its fine.
- 3. **Good text editor** - You might want to consider using good text editor for syntax hilighting and auto-complete for faster css.
