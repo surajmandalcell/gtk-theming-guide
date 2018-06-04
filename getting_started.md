@@ -1,11 +1,3 @@
-## Basic Concepts
-
-The GIMP ToolKit (GTK) is a widget-toolkit used to create GUIs on a variety of systems (thus making GTK cross-platform). GTK (http://www.gtk.org/) is commonly and incorrectly thought to stand for "GNOME ToolKit", but is actually stands for "GIMP ToolKit" because it was first created to design an user interface for GIMP. GTK is an object-oriented toolkit written in C (GTK itself is not a language). GTK is entirely open-source under the LGPL license. GTK is a widely used toolkit for GUIs and many tools are available for GTK.
-
-Themes made for GTK will not work in Qt-based applications. A Qt-theme is needed to apply a theme to Qt applications.
-
-The themes use Cascading Style-Sheets (CSS) to generate the theme's appearance. This is the same CSS that web-developers use on web-pages. However, instead of HTML tags being referenced, GTK widgets are specified. It is important that theme developers learn CSS.
-
 ## Tools Required/Helpful
 
  1. **GtkInspector** is a must have tool if you want to make gtk themes or style gtk apps. GtkInspector is the built-in interactive debugging support in GTK+. It was added in GTK+ 3.14, based on a copy of the well-estabished gtkparasite. This tool is integerated natively into gnome desktop environment but disabled by default. To use this you need to follow these steps :
@@ -22,8 +14,20 @@ The themes use Cascading Style-Sheets (CSS) to generate the theme's appearance. 
     ```sh
     sudo apt-get install libgtk-3-dev
     ```
+    ![Gtk inspector](../_media/gtk_isnpector.png)
+
  2. **Color picker** - You can use any color picker you want (gnome-color-picker, elementary color picker, etc.) as long as you have one its fine.
+
  3. **Good text editor** - You might want to consider using good text editor for syntax hilighting and auto-complete for faster css.
+
+
+## Basic Concepts
+
+The GIMP ToolKit (GTK) is a widget-toolkit used to create GUIs on a variety of systems (thus making GTK cross-platform). GTK (http://www.gtk.org/) is commonly and incorrectly thought to stand for "GNOME ToolKit", but is actually stands for "GIMP ToolKit" because it was first created to design an user interface for GIMP. GTK is an object-oriented toolkit written in C (GTK itself is not a language). GTK is entirely open-source under the LGPL license. GTK is a widely used toolkit for GUIs and many tools are available for GTK.
+
+Themes made for GTK will not work in Qt-based applications. A Qt-theme is needed to apply a theme to Qt applications.
+
+The themes use Cascading Style-Sheets (CSS) to generate the theme's appearance. This is the same CSS that web-developers use on web-pages. However, instead of HTML tags being referenced, GTK widgets are specified. It is important that theme developers learn CSS.
 
 
 ## Theme Location
@@ -55,3 +59,4 @@ Many theme-engines can be obtained from the default repositories. Debian-based L
 - gtk3-engines-oxygen - Engine port of the Oxygen widget style to GTK
 - gtk3-engines-unico - Unico GTK3 engine
 - gtk3-engines-xfce - GTK3 engine for Xfce
+
