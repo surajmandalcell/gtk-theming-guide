@@ -1,6 +1,7 @@
 * [Getting Started](getting_started.md)
-* [Creating Gtk3 Themes](creating_gtk3_themes.md)
-* [Creating Icon theme](creating_icon_theme.md)
+* [Creating Gtk Themes](creating_gtk_themes.md)
+* [FAQ Gtk Themes](faq_gtk_themes.md)
+* [Creating Icon Theme](creating_icon_theme.md)
 
-* [Further reading](further_reading.md)
+* [Further Reading](further_reading.md)
 * [Credits](CREDITS.md)

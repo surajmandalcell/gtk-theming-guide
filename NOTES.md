@@ -16,5 +16,5 @@ https://paper.dropbox.com/doc/gtk-icon--ADs2QYNC9ypVUUAZV6uyuu9~AQ-BxJU5pyVmhtz8
 ```sh
 now
 now alias
-now remove
+now remove -s all gtkthemingguide
 ```
