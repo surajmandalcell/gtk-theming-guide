@@ -5,3 +5,13 @@ a:focus{
 a:active{
 	outline: none;
 }
+
+.markdown-section strong{
+  font-size: 1.2rem;
+}
+
+.markdown-section p a img{
+  border:0px;
+  height:34px;
+  text-decoration: none;
+}
