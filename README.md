@@ -1,4 +1,4 @@
-# Gtk theming guide
+# Gtk theming guide [Help required, project stalled for far too long]
 
 [![Code Triagers Badge](https://www.codetriage.com/surajmandalcell/gtk-theming-guide/badges/users.svg)](https://www.codetriage.com/surajmandalcell/gtk-theming-guide)
 
