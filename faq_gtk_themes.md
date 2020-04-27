@@ -10,3 +10,5 @@ Now if the class exists then follow the steps
 2. Using the inspect button on the top left corner select the widget that you want to get the style off.
 3. Navigate to the `Css Nodes` section from the dropdown menu on the objects tab.
 4. Expand the hierchy and you'll find the class and id listed with more relevant information in sidebar.
+
+### 
