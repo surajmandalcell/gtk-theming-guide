@@ -5,7 +5,7 @@
 
 A novice guide to making gtk theme!
 
-Visit here https://gtkthemingguide.now.sh to see full documentation
+Visit here https://surajmandalcell.github.io/Gtk-Theming-Guide to see full documentation
 
 ![](_media/thumbnail.png)  
 
