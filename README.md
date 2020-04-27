@@ -1,5 +1,5 @@
 # Gtk theming guide 
-[Help required, project stalled for far too long]
+[Welp I'm no longer working on this so any pull request is appreciated]
 
 [![Code Triagers Badge](https://www.codetriage.com/surajmandalcell/gtk-theming-guide/badges/users.svg)](https://www.codetriage.com/surajmandalcell/gtk-theming-guide)
 
