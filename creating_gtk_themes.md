@@ -420,8 +420,7 @@ When creating themes, it may be helpful to test it and tweak the code to get the
    gtk-theme-switch" and type "gtk-theme-switch2" in a terminal to run
    it.
  - LXappearance - This program can change themes, icons, and fonts. PyWF
- - This is a Python-based alternative to "The Widget Factory". PyWF can be obtained at
-   http://gtk-apps.org/content/show.php/PyTWF?content=102024
+ - PyWF is a Python-based alternative to "The Widget Factory".
  - The Widget Factory - This is an old GTK-previewer. To install this program, type
    "apt-get install thewidgetfactory" and type "twf" in a terminal to
    run it.
