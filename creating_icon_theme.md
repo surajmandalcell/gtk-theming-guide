@@ -66,11 +66,17 @@ The icon images themselves can be made using Gimp (when making PNG files) and In
 Some icon-themes (like "Humanity") use a slightly different format. The "Humanity" icon-pack contains folders for each icon context (emotes, devices, places, etc.) and then the different sizes as sub-directories. The sub-directories for each icon size uses the name format "22" rather than "22x22".
 
 The files in the root of the icon-theme each have a particular purpose as described below.
+
 AUTHORS - List of authors and possibly their contact information and website
+
 CONTRIBUTORS - List of people that helped with the project
+
 COPYING - The license (such as GPL)
+
 cursor.theme - Cursor-theme information
+
 icon-theme.cache - Icon cache that are used as memory mapped files; the files directly map the icons files, thus reducing the time to find a needed icon
+
 index.theme - The icon-theme description file; encoded in UTF-8
 
 FUN FACT: The "gtk-update-icon-cache" command can be used to update/refresh the icon cache files.
@@ -115,10 +121,12 @@ Directories=8x8/emblems,16x16/actions,16x16/apps,
 
 
 ## Specify the context, size, and type of each directory
+```
 [8x8/emblems]
 Context=Emblems
 Size=8
 Type=Fixed
+```
 Installing and Removing Icons
 Icon themes can be installed by placing the icon-pack in one of the proper icon directories. If the icons are placed in "/usr/share/icons", then ensure that the owner is "Root" and the proper permissions are set so that all users can read the files.
 
@@ -136,8 +144,11 @@ NOTE: Directories must use "755" permissions (drwxr-xr-x) and files must use "64
 To remove icon themes, delete the icon-pack's directory.
 
 Obtaining Icons
+
 Icons can be obtained via the repositories or from various websites.
+
 GNOME-Look - http://gnome-look.org/index.php?xcontentmode=120x121
+
 Noobs Lab - http://www.noobslab.com/p/themes-icons.html
 
 Changing Icons
