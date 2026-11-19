@@ -17,8 +17,7 @@ pathbar > button > label {
 }
 ```
 
-That path is only an example: applications and GTK versions can use different node names and classes. Use the names shown for your application. In GTK selectors, node names are written as elements (`label`), style classes get a leading dot (`label.dim-label`), and widget names get a `#` (`label#breadcrumb`). A space matches a descendant; `>` matches a direct child. Start with the shortest selector that targets only the intended part, rather than styling every `label` in the
- application.
+That path is only an example: applications and GTK versions can use different node names and classes. Use the names shown for your application. In GTK selectors, node names are written as elements (`label`), style classes get a leading dot (`label.dim-label`), and widget names get a `#` (`label#breadcrumb`). A space matches a descendant; `>` matches a direct child. Start with the shortest selector that targets only the intended part, rather than styling every `label` in the application.
 
 See the GTK documentation for [running GTK Inspector](https://docs.gtk.org/gtk3/running.html) and [GTK CSS nodes and selectors](https://docs.gtk.org/gtk3/css-overview.html).
 
